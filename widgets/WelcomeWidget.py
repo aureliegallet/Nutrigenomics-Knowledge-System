@@ -4,13 +4,15 @@ from PyQt6.QtWidgets import (
     QVBoxLayout, 
     QWidget
 )
-from PyQt6.QtCore import QSize, Qt
+from PyQt6.QtCore import Qt
 
 
-# Class MainWindow inherits from the Qt MainWindow
+# Class WelcomeWidget inherits from the Qt MainWindow
 class WelcomeWidget(QWidget):
     def __init__(self):
         super().__init__()
+
+        self.isChecked = False
 
         # Make text
         welcomeLabel = QLabel("Welcome to our knowledge system!")
@@ -19,8 +21,15 @@ class WelcomeWidget(QWidget):
         
         # Make button 
         self.button = QPushButton("Say Hello!")
-        self.button.setCheckable(True)
         self.button.clicked.connect(self.the_button_was_clicked)
+        self.button.setStyleSheet("""
+            QPushButton {
+                background-color: gray; 
+            }
+            QPushButton:hover {
+                background-color: red; 
+            }
+        """)
 
         # Make layout
         layout = QVBoxLayout()
@@ -28,8 +37,9 @@ class WelcomeWidget(QWidget):
         layout.addWidget(self.button)
         self.setLayout(layout)
 
-    def the_button_was_clicked(self, checked):
-        if checked == True:
+    def the_button_was_clicked(self):
+        self.isChecked = not self.isChecked # inverts status
+        if self.isChecked == True:
             self.button.setText("Say Goodbye!")
         else: 
             self.button.setText("Say Hello!")

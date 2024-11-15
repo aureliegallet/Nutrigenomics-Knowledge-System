@@ -1,14 +1,15 @@
 from PyQt6.QtWidgets import (
     QMainWindow, 
-    QPushButton, 
-    QLabel, 
-    QVBoxLayout, 
+    QVBoxLayout,
+    QTabWidget,
+    QLabel,
     QWidget,
-    QTabWidget
 )
-from PyQt6.QtCore import QSize, Qt
-from WelcomeWidget import WelcomeWidget
-from ExpertWidget import ExpertWidget
+from PyQt6.QtCore import QSize
+from widgets.WelcomeWidget import WelcomeWidget
+from widgets.ExpertWidget import ExpertWidget
+from widgets.KnowledgeWidget import KnowledgeWidget
+from widgets.SystemWidget import SystemWidget
 
 
 # Class MainWindow inherits from the Qt MainWindow
@@ -19,18 +20,35 @@ class MainWindow(QMainWindow):
         # Set window 
         self.setWindowTitle("Knowledge Technology Practical")
         self.setFixedSize(QSize(800, 600))
-        #self.setStyleSheet("background-color: blue;") 
+        # self.setStyleSheet("background-color: blue;") 
 
+        # Tab Widgets
         welcomeWidget = WelcomeWidget()
+        systemWidget = SystemWidget()
         expertWidget = ExpertWidget()
+        knowledgeWidget = KnowledgeWidget()
 
         tabs = QTabWidget()
         tabs.setTabPosition(QTabWidget.TabPosition.North)
         tabs.addTab(welcomeWidget, "Welcome")
+        tabs.addTab(systemWidget, "System")
         tabs.addTab(expertWidget, "Expert")
+        tabs.addTab(knowledgeWidget, "Knowledge")    
+        tabs.setStyleSheet("""
+            QTabWidget::pane { 
+                padding-top: 10px;
+            }
+        """)    
 
-        
-        self.setCentralWidget(tabs)
+        # Layout
+        layout = QVBoxLayout()
+        layout.addWidget(tabs)
+
+
+        # Main Widget
+        mainWidget = QWidget()
+        mainWidget.setLayout(layout)
+        self.setCentralWidget(mainWidget)
 
 
     

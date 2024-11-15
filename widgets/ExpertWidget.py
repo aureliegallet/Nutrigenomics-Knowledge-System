@@ -1,13 +1,12 @@
 from PyQt6.QtWidgets import ( 
-    QPushButton, 
     QLabel, 
     QVBoxLayout, 
     QWidget
 )
-from PyQt6.QtCore import QSize, Qt
+from PyQt6.QtCore import Qt
 
 
-# Class MainWindow inherits from the Qt Widget
+# Class ExpertWidget inherits from the Qt Widget
 class ExpertWidget(QWidget):
     def __init__(self):
         super().__init__()
