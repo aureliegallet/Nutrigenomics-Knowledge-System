@@ -2,7 +2,6 @@ from PyQt6.QtWidgets import (
     QMainWindow, 
     QVBoxLayout,
     QTabWidget,
-    QLabel,
     QWidget,
 )
 from PyQt6.QtCore import QSize
