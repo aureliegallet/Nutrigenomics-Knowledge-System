@@ -1,0 +1,19 @@
+.vegetable-image {
+    position: relative; 
+    display: inline-block; 
+}
+.vegetable-image img {
+    width: 100%;
+    border: 10px;
+    border-color:white;
+    border-style: solid; 
+    border-radius: 20px; 
+}
+.vegetable-image h1 {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    color: #3a7250; 
+    font-size: 7vw; /* Scale with width */
+}
+  
