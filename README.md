@@ -1,5 +1,8 @@
 # Nutrigenomics-Knowledge-System
 
+## Authors
+Alexander Müller
+
 Navigate to the Flask folder by using `cd Flask`.
 
 Run `pip install -r requirements.txt` if needed.
