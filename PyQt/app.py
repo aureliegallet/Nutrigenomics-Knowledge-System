@@ -1,6 +1,6 @@
 from PyQt6.QtWidgets import QApplication
 import sys
-from MainWindow import MainWindow
+from PyQt.MainWindow import MainWindow
 
 
 # Create application using the command line arguments
