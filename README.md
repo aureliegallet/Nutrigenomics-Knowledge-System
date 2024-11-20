@@ -1,6 +1,6 @@
 # Nutrigenomics-Knowledge-System
 
-Navigate to the Flask Folder by using cd Flask.
+Navigate to the Flask Folder by using `cd Flask`.
 
 Run `pip install -r requirements.txt` if needed.
 
