@@ -1,24 +1,37 @@
 form{
-    margin: 20px;
+    margin-left: 50px;
+    margin-top: 20px;
 }
 
 .question{
     font-size: large;
     font-family: serif;
+    margin: 20px 0px 20px 0px;
 }
 
-.options{
-    padding: 20px;
+input[type="radio"] {
+    accent-color: #24523a; 
+    width: 20px; 
+    height: 20px;
+    cursor: pointer; 
+}
+
+label {
+    color: #24523a; 
+    cursor: pointer; 
+    position: absolute;
+    margin-left: 5px;
 }
 
 .next{
     padding: 15px;
     border: none;
     border-radius: 10px;
-    background-color: #a2d3ba;
+    background-color: #a5e9b5;
+    margin-top: 20px;
 }
 
 .next:hover{
-    background-color: #669d81;
+    background-color: #8bdaa0;
 }
 

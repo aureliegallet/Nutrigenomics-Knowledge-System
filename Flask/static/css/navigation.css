@@ -24,10 +24,10 @@ nav{
     border-radius: 10px;
 }
 .nav-links li a.active{
-    background: #0e4a2b;
+    background: #3b9b7e;
     color: white;
     pointer-events: none; /* No hover effects */
 }
 .nav-links li a:hover{
-    background: #a2d3ba;
+    background: #c0ebc5;
 }
