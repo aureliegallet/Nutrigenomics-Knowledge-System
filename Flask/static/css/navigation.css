@@ -26,7 +26,7 @@ nav{
 .nav-links li a.active{
     background: #0e4a2b;
     color: white;
-    pointer-events: none;/* No hover effects */
+    pointer-events: none; /* No hover effects */
 }
 .nav-links li a:hover{
     background: #a2d3ba;

@@ -4,7 +4,8 @@
 <title>Knowledge Technology Practical</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <head>    
-    <link rel="stylesheet" href="../static/css/navigation.css">    
+    <link rel="stylesheet" href="../static/css/navigation.css">   
+    <link rel="stylesheet" href="../static/css/quiz.css">    
 </head>    
 <body>
     <nav>
@@ -18,8 +19,24 @@
             <li><a href="/knowledge">Knowledge</a></li>
         </ul>
     </nav>
-      
-    <h1> System view! </h1>
+
+    <form>
+        <h1>Knowledge System</h1>
+        <div id="question" class="question"></div>
+        <input type="radio" id="never" name="frequency" value="Never">
+        <label for="never">Never</label><br>
+        <input type="radio" id="month" name="frequency" value="Once a month">
+        <label for="month">Once a month</label><br>
+        <input type="radio" id="week" name="frequency" value="Once a week">
+        <label for="week">Once a week</label><br>
+        <input type="radio" id="weekmultiple" name="frequency" value="Multiple times a week">
+        <label for="weekmultiple">Multiple times a week</label><br>
+        <input type="radio" id="day" name="frequency" value="Every day">
+        <label for="day">Every day</label><br>
+        <button id="next" class="next">Next Question</button>
+    </form>
+    
+    <script src="../static/js/quiz.js"></script>
 
 </body>
 </html>
