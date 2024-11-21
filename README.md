@@ -14,7 +14,9 @@ For development purposes, use `flask --app app  --debug run`.
 
 ## Authors
 Julia Belloni
+
 Aurelie Gallet
+
 Alexander Müller
 
 ## Note
