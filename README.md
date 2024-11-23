@@ -1,6 +1,7 @@
 # Nutrigenomics-Knowledge-System
 
 ## Running the System
+Python version: Python 3.13.0
 
 Navigate to the Flask folder by using `cd Flask`.
 
