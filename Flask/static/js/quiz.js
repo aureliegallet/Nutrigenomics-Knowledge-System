@@ -16,16 +16,41 @@ const questions = [
 let currentQuestion = 0;
 const questionElement = document.getElementById("question");
 const nextButton = document.getElementById("next");
-nextButton.addEventListener("click", nextQuestion); // On click
+nextButton.addEventListener("click", nextClicked); // On click
 
 function showQuestion() {
     const question = questions[currentQuestion];
     questionElement.innerText = question.question;
-    console.log(question.question)
+}
+
+function nextClicked(e){
+    e.preventDefault();
+    const answer = document.querySelector('input[name="frequency"]:checked');
+    if (answer) {
+        /* Send answer to backend */
+        const answerJson = { 
+            question: questions[currentQuestion].question,
+            frequency: answer.value 
+        };
+        fetch('/add-to-kb', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(answerJson),
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+
+        /* Go to next question */
+        nextQuestion()
+    } else {
+        console.log('You have to select an option.'); /* TODO: Make a div to display error message */
+    }
 }
 
 function nextQuestion(e) {
-    e.preventDefault();
     currentQuestion = currentQuestion + 1;
 
     if (currentQuestion < questions.length) {
@@ -44,3 +69,5 @@ function nextQuestion(e) {
 }
 
 showQuestion();
+
+/* TODO: Talk about when we should delete facts. */
