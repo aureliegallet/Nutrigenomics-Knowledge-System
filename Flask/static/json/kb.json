@@ -47,7 +47,313 @@
                 "3 - 5",
                 "5+"
             ],
+            "next": "vegetables"
+        },
+        "vegetables": {
+            "question_n": 5,
+            "question": "Do you eat vegetables?",
+            "options": [
+                "Yes",
+                "No"
+            ],
+            "next": {
+                "Yes": "leafy_greens",
+                "No": "animal_products"
+            }
+        },
+        "leafy_greens": {
+            "question_n": 6,
+            "question": "How often do you eat leafy greens in a week?",
+            "options": [
+                "Never",
+                "1 - 2",
+                "3 - 4",
+                "5 - 6",
+                "Every day"
+            ],
+            "next": "legumes"
+        },
+        "legumes": {
+            "question_n": 7,
+            "question": "How often do you eat legumes in a week?",
+            "options": [
+                "Never",
+                "1 - 2",
+                "3 - 4",
+                "5 - 6",
+                "Every day"
+            ],
+            "next": "other_vegetables"
+        },
+        "other_vegetables": {
+            "question_n": 8,
+            "question": "How often do you eat other vegetables in a week?",
+            "options": [
+                "Never",
+                "1 - 2",
+                "3 - 4",
+                "5 - 6",
+                "Every day"
+            ],
+            "next": "animal_products"
+        },
+        "animal_products": {
+            "question_n": 9,
+            "question": "Do you eat animal products?",
+            "options": [
+                "Yes",
+                "No"
+            ],
+            "next": {
+                "Yes": "meat",
+                "No": "juices"
+            }
+        },
+        "meat": {
+            "question_n": 10,
+            "question": "Do you eat meat?",
+            "options": [
+                "Yes",
+                "No"
+            ],
+            "next": {
+                "Yes": "red_meat",
+                "No": "fish"
+            }
+        },
+        "red_meat": {
+            "question_n": 11,
+            "question": "How many times a week do you eat red meat?",
+            "options": [
+                "Never",
+                "1 - 2",
+                "3 - 4",
+                "5 - 6",
+                "Every day"
+            ],
+            "next": "white_meat"
+        },
+        "white_meat": {
+            "question_n": 12,
+            "question": "How many times a week do you eat white meat?",
+            "options": [
+                "Never",
+                "1 - 2",
+                "3 - 4",
+                "5 - 6",
+                "Every day"
+            ],
+            "next": "fish"
+        },
+        "fish": {
+            "question_n": 13,
+            "question": "Do you eat fish?",
+            "options": [
+                "Yes",
+                "No"
+            ],
+            "next": {
+                "Yes": "lean_fish",
+                "No": "dairy"
+            }
+        },
+        "lean_fish": {
+            "question_n": 14,
+            "question": "How many times a week do you eat lean fish (e.g. cod, trout)?",
+            "options": [
+                "Never",
+                "1 - 2",
+                "3 - 4",
+                "5 - 6",
+                "Every day"
+            ],
+            "next": "fatty_fish"
+        },
+        "fatty_fish": {
+            "question_n": 15,
+            "question": "How many times a week do you eat fatty fish (e.g. salmon, tuna)?",
+            "options": [
+                "Never",
+                "1 - 2",
+                "3 - 4",
+                "5 - 6",
+                "Every day"
+            ],
+            "next": "dairy"
+        },
+        "dairy": {
+            "question_n": 16,
+            "question": "Do you eat dairy?",
+            "options": [
+                "Yes",
+                "No"
+            ],
+            "next": {
+                "Yes": "milk",
+                "No": "eggs"
+            }
+        },
+        "milk": {
+            "question_n": 17,
+            "question": "How many times a week do you drink milk?",
+            "options": [
+                "Never",
+                "1 - 2",
+                "3 - 4",
+                "5 - 6",
+                "Every day"
+            ],
+            "next": "yoghurt"
+        },
+        "yoghurt": {
+            "question_n": 18,
+            "question": "How many times a week do you eat yogurt?",
+            "options": [
+                "Never",
+                "1 - 2",
+                "3 - 4",
+                "5 - 6",
+                "Every day"
+            ],
+            "next": "cheese"
+        },
+        "cheese": {
+            "question_n": 19,
+            "question": "How many times a week do you eat cheese?",
+            "options": [
+                "Never",
+                "1 - 2",
+                "3 - 4",
+                "5 - 6",
+                "Every day"
+            ],
+            "next": "eggs"
+        },
+        "eggs": {
+            "question_n": 20,
+            "question": "How many times a week do you eat eggs?",
+            "options": [
+                "Never",
+                "1 - 2",
+                "3 - 4",
+                "5 - 6",
+                "Every day"
+            ],
+            "next": "juices"
+        },
+        "juices": {
+            "question_n": 21,
+            "question": "Do you drink fruit juices?",
+            "options": [
+                "Yes",
+                "No"
+            ],
+            "next": "fruit"
+        },
+        "fruit": {
+            "question_n": 22,
+            "question": "Do you eat fruit?",
+            "options": [
+                "Yes",
+                "No"
+            ],
+            "next": {
+                "Yes": "dried_fruit",
+                "No": "alcohol"
+            }
+        },
+        "dried_fruit": {
+            "question_n": 23,
+            "question": "How many times a week do you eat dried fruit?",
+            "options": [
+                "Never",
+                "1 - 2",
+                "3 - 4",
+                "5 - 6",
+                "Every day"
+            ],
+            "next": "high_low_sugar_fruit"
+        },
+        "high_low_sugar_fruit": {
+            "question_n": 24,
+            "question": "Do you eat the following?",
+            "options": [
+                "list of high sugar fruit",
+                "list of low sugar fruit"
+            ],
+            "next": "alcohol"
+        },
+        "alcohol": {
+            "question_n": 25,
+            "question": "How many times a week do you drink alcohol?",
+            "options": [
+                "Never",
+                "1 - 2",
+                "3 - 4",
+                "5 - 6",
+                "Every day"
+            ],
+            "next": "sodas"
+        },
+        "sodas": {
+            "question_n": 26,
+            "question": "How many times a week do you drink sodas (e.g. Fanta, Sprite, Coke)?",
+            "options": [
+                "Never",
+                "1 - 2",
+                "3 - 4",
+                "5 - 6",
+                "Every day"
+            ],
+            "next": "ultra_processed_food"
+        },
+        "ultra_processed_food": {
+            "question_n": 27,
+            "question": "How many times a week do you eat ultra-processed food (e.g. Chips, Candy)?",
+            "options": [
+                "Never",
+                "1 - 2",
+                "3 - 4",
+                "5 - 6",
+                "Every day"
+            ],
+            "next": "nuts"
+        },
+        "nuts": {
+            "question_n": 28,
+            "question": "How many times a week do you eat nuts (e.g. cashew, peanuts)?",
+            "options": [
+                "Never",
+                "1 - 2",
+                "3 - 4",
+                "5 - 6",
+                "Every day"
+            ],
+            "next": "substitutes"
+        },
+        "substitutes": {
+            "question_n": 29,
+            "question": "How many times a week do you eat plant based substitues (e.g. tofu, tempeh)?",
+            "options": [
+                "Never",
+                "1 - 2",
+                "3 - 4",
+                "5 - 6",
+                "Every day"
+            ],
+            "next": "supplements"
+        },
+        "supplements": {
+            "question_n": 30,
+            "question": "Do you take supplements?",
+            "options": [
+                "Yes",
+                "No"
+            ],
             "next": null
+        },
+        "more": {
+            "question": "list suppplements we want to ask about"
         }
     },
     "Facts": []
