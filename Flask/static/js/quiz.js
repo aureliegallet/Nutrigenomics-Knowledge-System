@@ -1,36 +1,86 @@
 const questions = [
     {
-        question: "Fake Question 1: How often do you eat meat?",
-        options: ["Never", "Once a month", "Once a week", "Multiple times a week", "Every day"]
+        question: "How old are you?",
+        options: ["0-18", "19-30", "31-50", "51+"],
+        next: 1
     },
     {
-        question: "Fake Question 2: How often do you consume dairy?",
-        options: ["Never", "Once a month", "Once a week", "Multiple times a week", "Every day"]
+        question: "Do you eat vegetables?",
+        options: ["Yes", "No"],
+        next: {
+            Yes: 2,
+            No: 5 
+        }
     },
     {
-        question: "Fake Question 3: How often do you eat fruit?",
-        options: ["Never", "Once a month", "Once a week", "Multiple times a week", "Every day"]
+        question: "Do you eat leafy green vegetables (e.g. lettuce, spinach, cale)", 
+        options: ["Yes", "No"],
+        next: 3
     },
-  ];
+    {
+        question: "Do you eat legumes (e.g., beans, lentils)?",
+        options: ["Yes", "No"],
+        next: 4
+    }, 
+    {
+        question: "Do you eat other vegetables?",
+        options: ["Yes", "No"],
+        next: 5
+    },
+    {
+        question: "Do you eat meat?",
+        options: ["Yes", "No"],
+        next: null
+    },
+];
 
 let currentQuestion = 0;
 const questionElement = document.getElementById("question");
+const optionsElement = document.getElementById('options');
 const nextButton = document.getElementById("next");
-nextButton.addEventListener("click", nextClicked); // On click
+nextButton.addEventListener("click", nextClicked);
 
 function showQuestion() {
+    /* Render question */
     const question = questions[currentQuestion];
-    questionElement.innerText = question.question;
+    if (question.question.includes('</a>')) { /* Proper display for if there is a link in the question */
+        questionElement.innerHTML = question.question;
+    } else {
+        questionElement.innerText = question.question;
+    }
+    
+    /* Render options */
+    optionsElement.innerHTML = '';
+
+    question.options.forEach((option, idx) => {
+        let optionName = `option${idx}`
+
+        const radioInput = Object.assign(document.createElement('input'), {
+            type: 'radio',
+            id: optionName,
+            name: 'option',
+            value: option
+        });    
+        const label = Object.assign(document.createElement('label'), {
+            htmlFor: optionName,
+            innerText: option
+        });
+
+        /* Add options to div */
+        optionsElement.appendChild(radioInput);
+        optionsElement.appendChild(label);
+        optionsElement.appendChild(document.createElement('br'));
+    });
 }
 
 function nextClicked(e){
     e.preventDefault();
-    const answer = document.querySelector('input[name="frequency"]:checked');
+    const answer = document.querySelector('input[name="option"]:checked');
     if (answer) {
         /* Send answer to backend */
         const answerJson = { 
             question: questions[currentQuestion].question,
-            frequency: answer.value 
+            option: answer.value 
         };
         fetch('/add-to-kb', {
             method: 'POST',
@@ -43,18 +93,25 @@ function nextClicked(e){
             console.error('Error:', error);
         });
 
+
         /* Go to next question */
-        nextQuestion()
+        /* Check if we are currently branching according to the answer */
+        let next = questions[currentQuestion].next
+        if (typeof next === 'object' && next != null) {
+            next = next[answer.value];
+        }
+        nextQuestion(next) 
     } else {
         console.log('You have to select an option.'); /* TODO: Make a div to display error message */
     }
 }
 
-function nextQuestion(e) {
-    currentQuestion = currentQuestion + 1;
-
-    if (currentQuestion < questions.length) {
-        const radioButtons = document.querySelectorAll('input[name="frequency"]');
+function nextQuestion(next) {
+    currentQuestion = next;
+    console.log(next);
+    
+    if (currentQuestion != null) {
+        const radioButtons = document.querySelectorAll('input[name="option"]');
         radioButtons.forEach((radio) => {
             radio.checked = false;
         });
