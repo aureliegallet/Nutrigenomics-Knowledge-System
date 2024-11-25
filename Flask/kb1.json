@@ -1,0 +1,381 @@
+{
+    "Knowledge Base": [],
+    "Questions":{
+        "questions": [
+            {   
+                "question_n": 0,
+                "question": "How old are you?",
+                "options": ["0-18", "19-30", "31-50", "51+"],
+                "next": {
+                    "0-18": 1,
+                    "19-30": 1,
+                    "31-50": 1,
+                    "51+": 1
+                }
+            },
+            {
+                "question_n": 1,
+                "question": "What is your biologically determined sex?",
+                "options": ["Female", "Male", "Other"],
+                "next": {
+                    "Female": 2,
+                    "Male": 2,
+                    "Other": 2
+                }
+            },
+            {
+                "question_n": 2,
+                "question": "What is your BMI? You can calculate it at the following link: <a href='https://www.calculator.net/bmi-calculator.html'>BMI Calculator</a>",
+                "options": ["under 18.5>", "18.5 - 24.9", "25-29.9", "30-39.9", "over 40"],
+                "next": {
+                    "under 18.5>": 3,
+                    "18.5 - 24.9": 3,
+                    "25-29.9": 3,
+                    "30-39.9": 3,
+                    "over 40": 3
+
+                }
+            },
+            {
+                "question_n": 3,
+                "question": "With the amount you sleep do you feel well rested?",
+                "options": ["Yes", "No"],
+                "next": {
+                    "Yes": 4,
+                    "No": 4
+                }
+            },
+            {   
+                "question_n": 4,
+                "question": "How many times a week do you exercise?",
+                "options": ["less than 1", "1 - 3", "3 - 5", "5+"],
+                "next": {
+                    "less than 1": 5,
+                    "1 - 3": 5,
+                    "3 - 5": 5,
+                    "5+": 5
+                }
+            }
+        ],
+
+        "questions": [
+            {
+                "question_n": 5,
+                "question": "Do you eat vegetables?",
+                "options": ["Yes", "No"],
+                "next": {
+                    "Yes": 6,
+                    "No": 9
+                }
+            },
+            {
+                "question_n": 6,
+                "question": "How often do you eat leafy greens in a week?", 
+                "options": ["Never", "1 - 2", "3 - 4", "5 - 6", "Every day"],
+                "next": {
+                    "Never": 7,
+                    "1 - 2": 7,
+                    "3 - 4": 7,
+                    "5 - 6": 7,
+                    "Every day": 7
+                }   
+            },
+            {
+                "question_n": 7,
+                "question": "How often do you eat legumes in a week?",
+                "options": ["Never", "1 - 2", "3 - 4", "5 - 6", "Every day"],
+                "next": {
+                    "Never": 8,
+                    "1 - 2": 8,
+                    "3 - 4": 8,
+                    "5 - 6": 8,
+                    "Every day": 8
+                }   
+            },
+            {
+                "question_n": 8,
+                "question": "How often do you eat other vegetabvles in a week?",
+                "options": ["Never", "1 - 2", "3 - 4", "5 - 6", "Every day"],
+                "next": {
+                    "Never": 9,
+                    "1 - 2": 9,
+                    "3 - 4": 9,
+                    "5 - 6": 9,
+                    "Every day": 9
+                }   
+            }
+        ],
+
+        "questions": [
+            {
+                "question_n": 9,
+                "question": "Do you eat animal products?",
+                "options": ["Yes", "No"],
+                "next": {
+                    "Yes": 10,
+                    "No": 21
+                }
+            },
+            {
+                "question_n": 10,
+                "question": "Do you eat meat?",
+                "options": ["Yes", "No"],
+                "next": {
+                    "Yes": 11,
+                    "No": 13
+                }
+            },
+            {
+                "question_n": 11,
+                "question": "How many times a week do you eat red meat?",
+                "options": ["Never", "1 - 2", "3 - 4", "5 - 6", "Every day"],
+                "next": {
+                    "Never": 12,
+                    "1 - 2": 12,
+                    "3 - 4": 12,
+                    "5 - 6": 12,
+                    "Every day": 12
+                } 
+            },
+            {
+                "question_n": 12,
+                "question": "How many times a week do you eat white meat?",
+                "options": ["Never", "1 - 2", "3 - 4", "5 - 6", "Every day"],
+                "next": {
+                    "Never": 9,
+                    "1 - 2": 9,
+                    "3 - 4": 9,
+                    "5 - 6": 9,
+                    "Every day": 9
+                } 
+            },
+            {
+                "question_n": 13,
+                "question": "Do you eat fish?",
+                "options": ["Yes", "No"],
+                "next": {
+                    "Yes": 14,
+                    "No": 16
+                }
+            },
+
+            {
+                "question_n": 14,
+                "question": "How many times a week do you eat lean fish (e.g. cod, trout)?",
+                "options": ["Never", "1 - 2", "3 - 4", "5 - 6", "Every day"],
+                "next": {
+                    "Never": 15,
+                    "1 - 2": 15,
+                    "3 - 4": 15,
+                    "5 - 6": 15,
+                    "Every day": 15
+                } 
+            },
+            {
+                "question_n": 15,
+                "question": "How many times a week do you eat fatty fish (e.g. salmon, tuna)?",
+                "options": ["Never", "1 - 2", "3 - 4", "5 - 6", "Every day"],
+                "next": {
+                    "Never": 16,
+                    "1 - 2": 16,
+                    "3 - 4": 16,
+                    "5 - 6": 16,
+                    "Every day": 16
+                } 
+            },
+            {
+                "question_n": 16,
+                "question": "Do you eat dairy?",
+                "options": ["Yes", "No"],
+                "next": {
+                    "Yes": 17,
+                    "No": 20
+                }
+            },
+            {
+                "question_n": 17,
+                "question": "How many times a week do you drink milk?",
+                "options": ["Never", "1 - 2", "3 - 4", "5 - 6", "Every day"],
+                "next": {
+                    "Never": 18,
+                    "1 - 2": 18,
+                    "3 - 4": 18,
+                    "5 - 6": 18,
+                    "Every day": 18
+                } 
+            },
+            {
+                "question_n": 18,
+                "question": "How many times a week do you eat yogurt?",
+                "options": ["Never", "1 - 2", "3 - 4", "5 - 6", "Every day"],
+                "next": {
+                    "Never": 19,
+                    "1 - 2": 19,
+                    "3 - 4": 19,
+                    "5 - 6": 19,
+                    "Every day": 19
+                } 
+            },
+            {
+                "question_n": 19,
+                "question": "How many times a week do you eat cheese?",
+                "options": ["Never", "1 - 2", "3 - 4", "5 - 6", "Every day"],
+                "next": {
+                    "Never": 20,
+                    "1 - 2": 20,
+                    "3 - 4": 20,
+                    "5 - 6": 20,
+                    "Every day": 20
+                } 
+            },
+
+            {
+                "question_n": 20,
+                "question": "How many times a week do you eat eggs?",
+                "options": ["Never", "1 - 2", "3 - 4", "5 - 6", "Every day"],
+                "next": {
+                    "Never": 21,
+                    "1 - 2": 21,
+                    "3 - 4": 21,
+                    "5 - 6": 21,
+                    "Every day": 21
+                } 
+            }
+            
+            
+        ],
+
+        "questions": [
+            {
+                "question_n": 21,
+                "question": "Do you drink fruit juices?",
+                "options": ["Yes", "No"],
+                "next": {
+                    "Yes": 22,
+                    "No": 22
+                }
+            },
+
+            {
+                "question_n": 22,
+                "question": "Do you eat fruit?",
+                "options": ["Yes", "No"],
+                "next": {
+                    "Yes": 23,
+                    "No": 25
+                }
+            },
+            {
+                "question_n": 23,
+                "question": "How many times a week do you eat dried fruit?",
+                "options": ["Never", "1 - 2", "3 - 4", "5 - 6", "Every day"],
+                "next": {
+                    "Never": 24,
+                    "1 - 2": 24,
+                    "3 - 4": 24,
+                    "5 - 6": 24,
+                    "Every day": 24
+                } 
+            },
+
+            {
+                "question_n": 24,
+                "question": "Do you eat the following?",
+                "options": ["list of high sugar fruit", "list of low sugar fruit"],
+                "next": {
+                    "list of high sugar fruit":25,
+                    "list of low sugar fruit": 25
+                } 
+            },
+
+        ],
+
+        "questions": [
+            {
+                "question_n": 25,
+                "question": "How many times a week do you drink alcohol?",
+                "options": ["Never", "1 - 2", "3 - 4", "5 - 6", "Every day"],
+                "next": {
+                    "Never": 26,
+                    "1 - 2": 26,
+                    "3 - 4": 26,
+                    "5 - 6": 26,
+                    "Every day": 26
+                } 
+            },
+
+            {
+                "question_n": 26,
+                "question": "How many times a week do you drink sodas (e.g. Fanta, Sprite, Coke)?",
+                "options": ["Never", "1 - 2", "3 - 4", "5 - 6", "Every day"],
+                "next": {
+                    "Never": 27,
+                    "1 - 2": 27,
+                    "3 - 4": 27,
+                    "5 - 6": 27,
+                    "Every day": 27
+                } 
+            },
+
+            {
+                "question_n": 27,
+                "question": "How many times a week do you eat ultra-processed food (e.g. Chips, Candies)?",
+                "options": ["Never", "1 - 2", "3 - 4", "5 - 6", "Every day"],
+                "next": {
+                    "Never": 28,
+                    "1 - 2": 28,
+                    "3 - 4": 28,
+                    "5 - 6": 28,
+                    "Every day": 28
+                } 
+            }
+
+        ],
+
+        "questions": [
+            {
+                "question_n": 28,
+                "question": "How many times a week do you eat nuts (e.g. cashew, peanuts)?",
+                "options": ["Never", "1 - 2", "3 - 4", "5 - 6", "Every day"],
+                "next": {
+                    "Never": 29,
+                    "1 - 2": 29,
+                    "3 - 4": 29,
+                    "5 - 6": 29,
+                    "Every day": 29
+                } 
+            },
+            {
+                "question_n": 29,
+                "question": "How many times a week do you eatplant based substitues (e.g. tofu, tempeh)?",
+                "options": ["Never", "1 - 2", "3 - 4", "5 - 6", "Every day"],
+                "next": {
+                    "Never": 30,
+                    "1 - 2": 30,
+                    "3 - 4": 30,
+                    "5 - 6": 30,
+                    "Every day": 30
+                } 
+            }
+        ],
+
+        "questions": [
+            {
+                "question_n": 30,
+                "question": "Do you take supplements?",
+                "options": ["Yes", "No"],
+                "next": {
+                    "Yes":31,
+                    "No": 31
+                } 
+            },
+            {
+                "question": "list suppplements we want to ask about"
+            }
+        ]
+    },
+    "Facts": []
+}
+
+
+    
