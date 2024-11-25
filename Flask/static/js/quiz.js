@@ -1,48 +1,32 @@
-const questions = [
-    {
-        question: "How old are you?",
-        options: ["0-18", "19-30", "31-50", "51+"],
-        next: 1
-    },
-    {
-        question: "Do you eat vegetables?",
-        options: ["Yes", "No"],
-        next: {
-            Yes: 2,
-            No: 5 
-        }
-    },
-    {
-        question: "Do you eat leafy green vegetables (e.g. lettuce, spinach, cale)", 
-        options: ["Yes", "No"],
-        next: 3
-    },
-    {
-        question: "Do you eat legumes (e.g., beans, lentils)?",
-        options: ["Yes", "No"],
-        next: 4
-    }, 
-    {
-        question: "Do you eat other vegetables?",
-        options: ["Yes", "No"],
-        next: 5
-    },
-    {
-        question: "Do you eat meat?",
-        options: ["Yes", "No"],
-        next: null
-    },
-];
-
-let currentQuestion = 0;
+let questions = {}
+let currentQuestion = "age";
 const questionElement = document.getElementById("question");
 const optionsElement = document.getElementById('options');
 const nextButton = document.getElementById("next");
 nextButton.addEventListener("click", nextClicked);
 
+async function loadQuestions() {
+    /* Load json file */
+    try {
+        const response = await fetch('/static/json/kb.json');
+        const data = await response.json();
+        
+        questions = data.Questions;
+        showQuestion(); 
+    } catch (error) {
+        console.error("Error loading questions:", error);
+    }
+}
+
 function showQuestion() {
     /* Render question */
     const question = questions[currentQuestion];
+
+    if (!question) {
+        console.log("Question key is not found.");
+        return;
+    }
+
     if (question.question.includes('</a>')) { /* Proper display for if there is a link in the question */
         questionElement.innerHTML = question.question;
     } else {
@@ -125,6 +109,5 @@ function nextQuestion(next) {
     }
 }
 
-showQuestion();
-
+loadQuestions();
 /* TODO: Talk about when we should delete facts. */

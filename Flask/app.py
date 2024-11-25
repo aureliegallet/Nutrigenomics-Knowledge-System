@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import json
 
-knowledge_base = 'kb.json'
+knowledge_base = '../Flask/static/json/kb.json'
 
 app = Flask(__name__)
 
@@ -25,6 +25,7 @@ def show_knowlegde():
 def save_data():
     try:
         answer = request.get_json()
+        print(answer)
         with open(knowledge_base, 'r') as json_file:
             knowledge = json.load(json_file)
         knowledge["Facts"].append(answer)

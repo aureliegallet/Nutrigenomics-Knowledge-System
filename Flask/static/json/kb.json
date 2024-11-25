@@ -1,0 +1,54 @@
+{
+    "Knowledge Base": [],
+    "Questions": {
+        "age": {
+            "question": "How old are you?",
+            "options": [
+                "0-18",
+                "19-30",
+                "31-50",
+                "51+"
+            ],
+            "next": "sex"
+        },
+        "sex": {
+            "question": "What is your biologically determined sex?",
+            "options": [
+                "Female",
+                "Male",
+                "Other"
+            ],
+            "next": "BMI"
+        },
+        "BMI": {
+            "question": "What is your BMI? You can calculate it at the following link: <a href='https://www.calculator.net/bmi-calculator.html'>BMI Calculator</a>",
+            "options": [
+                "under 18.5>",
+                "18.5 - 24.9",
+                "25-29.9",
+                "30-39.9",
+                "over 40"
+            ],
+            "next": "sleep"
+        },
+        "sleep": {
+            "question": "With the amount you sleep do you feel well rested?",
+            "options": [
+                "Yes",
+                "No"
+            ],
+            "next": "exercise"
+        },
+        "exercise": {
+            "question": "How many times a week do you exercise?",
+            "options": [
+                "less than 1",
+                "1 - 3",
+                "3 - 5",
+                "5+"
+            ],
+            "next": null
+        }
+    },
+    "Facts": []
+}
