@@ -13,5 +13,6 @@ Green Palette:
 - Green 3: #8bdaa0
 - Green 4: #a5e9b5
 - Green 5: #c0ebc5
+- Green 6: #8acd9c
 - Yellow: #f3f4b3
 - Orange: #fac64d

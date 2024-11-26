@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <link rel="stylesheet" href="../static/css/navigation.css">   
-    <link rel="stylesheet" href="../static/css/quiz.css">    
+    <link rel="stylesheet" href="../static/css/quiz.css">  
+    <link rel="stylesheet" href="../static/css/system.css">      
 </head>    
 <body>
     <nav>
@@ -20,13 +21,22 @@
             <li><a href="/knowledge">Knowledge</a></li>
         </ul>
     </nav>
-
-    <form>
-        <h1>Knowledge System</h1>
-        <div id="question" class="question"></div>
-        <div id="options" class="options"></div>
-        <button id="next" class="next">Next Question</button>
-    </form>
+    
+    <div class="system">
+        <form>
+            <h1>Knowledge System</h1>
+            <div id="question" class="question"></div>
+            <div id="options" class="options"></div>
+            <button id="next" class="next">Next Question</button>
+        </form>
+    
+        <div id="folder" class="folder">
+            <div class="page">
+                <h3 id="title" class="title"></h3>
+                <p id="note" class="note"></p>
+            </div>
+        </div>
+    </div>
     
     <script src="../static/js/quiz.js"></script>
 

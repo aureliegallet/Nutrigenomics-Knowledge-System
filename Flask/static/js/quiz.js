@@ -4,6 +4,9 @@ const questionElement = document.getElementById("question");
 const optionsElement = document.getElementById('options');
 const nextButton = document.getElementById("next");
 nextButton.addEventListener("click", nextClicked);
+const folderElement = document.getElementById("folder");
+const titleElement = document.getElementById("title");
+const noteElement = document.getElementById("note");
 
 async function loadQuestions() {
     /* Load json file */
@@ -55,6 +58,16 @@ function showQuestion() {
         optionsElement.appendChild(label);
         optionsElement.appendChild(document.createElement('br'));
     });
+
+    /* Render notes */
+    if (question.hasOwnProperty("title") && question.hasOwnProperty("note")) {
+        titleElement.innerText = question.title
+        noteElement.innerText = question.note
+        folderElement.style.visibility = "visible"; 
+    }
+    else {
+        folderElement.style.visibility = "hidden";
+    }
 }
 
 function nextClicked(e){

@@ -71,7 +71,9 @@
                 "5 - 6",
                 "Every day"
             ],
-            "next": "legumes"
+            "next": "legumes",
+            "title": "Leafy Greens",
+            "note": "Leafy greens include kale, spinach, arugula, beets, turnips, ..."
         },
         "legumes": {
             "question_n": 7,

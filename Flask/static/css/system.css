@@ -1,0 +1,47 @@
+.system {
+    display: flex;
+    gap: 50px;
+}
+
+.folder {
+    width: 185px;
+    height: 200px;
+    margin-top: 80px;
+    border-radius: 10px;
+    padding: 10px 5px;
+    box-shadow: 0px 1px 3px black;
+    position: relative;
+    background-color: #8acd9c;
+    visibility: hidden; /* Should be hidden unless there is a note to show */
+}
+
+.folder::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    height: 65%;
+    border-style: solid;
+    border-width: 25px 0px 25px 30px;
+    filter: drop-shadow(5px 0 4px rgb(0, 0, 0, 0.3));
+    border-color: transparent transparent transparent #8acd9c;
+}
+
+.folder:hover .page {
+    left: 25px;
+}
+
+.page {
+    height: 180px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 1px 3px black;
+    position: relative;
+    left: 10px;
+}
+
+.title {
+    color: #8acd9c;
+    padding-bottom: 5px;
+}
