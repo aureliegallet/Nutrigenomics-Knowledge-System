@@ -1,6 +1,9 @@
 .system {
     display: flex;
     gap: 50px;
+    background-color: #ceedd2;
+    padding-bottom: 20px;
+    margin: 0 50px 0 50px;
 }
 
 .folder {
