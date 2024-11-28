@@ -114,23 +114,25 @@ function nextQuestion(next) {
         });
         showQuestion();
     } else {
-        /* Send reset order to backend */
-        fetch('/reset-kb', {
-            method: 'DELETE', 
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        })
-        .catch(error => {
-            console.error('Error clearing facts:', error);
-        });
-
         const form = document.querySelector("form"); 
         form.innerHTML = `
             <h1>Results</h1>
             <p>Our diagnosis</p>
         `;
     }
+}
+
+function resetKB() {
+    /* Send reset order to backend */
+    fetch('/reset-kb', {
+        method: 'DELETE', 
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+    .catch(error => {
+        console.error('Error clearing facts:', error);
+    });
 }
 
 loadQuestions();

@@ -85,7 +85,9 @@
                 "5 - 6",
                 "Every day"
             ],
-            "next": "other_vegetables"
+            "next": "other_vegetables",
+            "title": "Legumes",
+            "note": "Legumes include beans, chickpeas, peanuts, lentils, tamarind, ..."
         },
         "other_vegetables": {
             "question_n": 8,
@@ -133,7 +135,9 @@
                 "5 - 6",
                 "Every day"
             ],
-            "next": "white_meat"
+            "next": "white_meat",
+            "title": "Red Meats",
+            "note": "Red Meats include beef, horse, bacon, mutton, venison, ..."
         },
         "white_meat": {
             "question_n": 12,
@@ -145,7 +149,9 @@
                 "5 - 6",
                 "Every day"
             ],
-            "next": "fish"
+            "next": "fish",
+            "title": "White Meats",
+            "note": "White Meats include rabbit, chicken, turkey, ..."
         },
         "fish": {
             "question_n": 13,
@@ -169,7 +175,9 @@
                 "5 - 6",
                 "Every day"
             ],
-            "next": "fatty_fish"
+            "next": "fatty_fish",
+            "title": "Lean Fish",
+            "note": "Lean Fish include cod, flounder, sole, perch, halibut, ..."
         },
         "fatty_fish": {
             "question_n": 15,
@@ -181,7 +189,9 @@
                 "5 - 6",
                 "Every day"
             ],
-            "next": "dairy"
+            "next": "dairy",
+            "title": "Fatty Fish",
+            "note": "Fatty Fish include anchovies, herring, mackerel, salmon, sardines, ..."
         },
         "dairy": {
             "question_n": 16,
@@ -299,7 +309,7 @@
         },
         "sodas": {
             "question_n": 26,
-            "question": "How many times a week do you drink sodas (e.g. Fanta, Sprite, Coke)?",
+            "question": "How many times a week do you drink sodas?",
             "options": [
                 "Never",
                 "1 - 2",
@@ -307,7 +317,9 @@
                 "5 - 6",
                 "Every day"
             ],
-            "next": "ultra_processed_food"
+            "next": "ultra_processed_food",
+            "title": "Sodas",
+            "note": "Sodas include Fanta, Sprite, Coke, ..."
         },
         "ultra_processed_food": {
             "question_n": 27,
@@ -319,11 +331,13 @@
                 "5 - 6",
                 "Every day"
             ],
-            "next": "nuts"
+            "next": "nuts",
+            "title": "Ultra Processed Foods",
+            "note": "Ultra Processed Foods include Chips and Candy, ..."
         },
         "nuts": {
             "question_n": 28,
-            "question": "How many times a week do you eat nuts (e.g. cashew, peanuts)?",
+            "question": "How many times a week do you eat nuts?",
             "options": [
                 "Never",
                 "1 - 2",
@@ -331,11 +345,13 @@
                 "5 - 6",
                 "Every day"
             ],
-            "next": "substitutes"
+            "next": "substitutes",
+            "title": "Nuts",
+            "note": "Nuts include cashew, peanuts, ..."
         },
         "substitutes": {
             "question_n": 29,
-            "question": "How many times a week do you eat plant based substitues (e.g. tofu, tempeh)?",
+            "question": "How many times a week do you eat plant based substitues?",
             "options": [
                 "Never",
                 "1 - 2",
@@ -343,7 +359,9 @@
                 "5 - 6",
                 "Every day"
             ],
-            "next": "supplements"
+            "next": "supplements",
+            "title": "Plant-based Substitutes",
+            "note": "Plant-based Substitutes include tofu, tempeh, ..."
         },
         "supplements": {
             "question_n": 30,
