@@ -50,7 +50,6 @@
             "next": "vegetables"
         },
         "vegetables": {
-            "question_n": 5,
             "question": "Do you eat vegetables?",
             "options": [
                 "Yes",
@@ -62,7 +61,6 @@
             }
         },
         "leafy_greens": {
-            "question_n": 6,
             "question": "How often do you eat leafy greens in a week?",
             "options": [
                 "Never",
@@ -76,7 +74,6 @@
             "note": "Leafy greens include kale, spinach, arugula, beets, turnips, ..."
         },
         "legumes": {
-            "question_n": 7,
             "question": "How often do you eat legumes in a week?",
             "options": [
                 "Never",
@@ -90,7 +87,6 @@
             "note": "Legumes include beans, chickpeas, peanuts, lentils, tamarind, ..."
         },
         "other_vegetables": {
-            "question_n": 8,
             "question": "How often do you eat other vegetables in a week?",
             "options": [
                 "Never",
@@ -102,7 +98,6 @@
             "next": "animal_products"
         },
         "animal_products": {
-            "question_n": 9,
             "question": "Do you eat animal products?",
             "options": [
                 "Yes",
@@ -114,7 +109,6 @@
             }
         },
         "meat": {
-            "question_n": 10,
             "question": "Do you eat meat?",
             "options": [
                 "Yes",
@@ -126,7 +120,6 @@
             }
         },
         "red_meat": {
-            "question_n": 11,
             "question": "How many times a week do you eat red meat?",
             "options": [
                 "Never",
@@ -140,7 +133,6 @@
             "note": "Red Meats include beef, horse, bacon, mutton, venison, ..."
         },
         "white_meat": {
-            "question_n": 12,
             "question": "How many times a week do you eat white meat?",
             "options": [
                 "Never",
@@ -154,7 +146,6 @@
             "note": "White Meats include rabbit, chicken, turkey, ..."
         },
         "fish": {
-            "question_n": 13,
             "question": "Do you eat fish?",
             "options": [
                 "Yes",
@@ -166,7 +157,6 @@
             }
         },
         "lean_fish": {
-            "question_n": 14,
             "question": "How many times a week do you eat lean fish (e.g. cod, trout)?",
             "options": [
                 "Never",
@@ -180,7 +170,6 @@
             "note": "Lean Fish include cod, flounder, sole, perch, halibut, ..."
         },
         "fatty_fish": {
-            "question_n": 15,
             "question": "How many times a week do you eat fatty fish (e.g. salmon, tuna)?",
             "options": [
                 "Never",
@@ -194,7 +183,6 @@
             "note": "Fatty Fish include anchovies, herring, mackerel, salmon, sardines, ..."
         },
         "dairy": {
-            "question_n": 16,
             "question": "Do you eat dairy?",
             "options": [
                 "Yes",
@@ -206,7 +194,6 @@
             }
         },
         "milk": {
-            "question_n": 17,
             "question": "How many times a week do you drink milk?",
             "options": [
                 "Never",
@@ -218,7 +205,6 @@
             "next": "yoghurt"
         },
         "yoghurt": {
-            "question_n": 18,
             "question": "How many times a week do you eat yogurt?",
             "options": [
                 "Never",
@@ -230,7 +216,6 @@
             "next": "cheese"
         },
         "cheese": {
-            "question_n": 19,
             "question": "How many times a week do you eat cheese?",
             "options": [
                 "Never",
@@ -242,7 +227,6 @@
             "next": "eggs"
         },
         "eggs": {
-            "question_n": 20,
             "question": "How many times a week do you eat eggs?",
             "options": [
                 "Never",
@@ -254,7 +238,6 @@
             "next": "juices"
         },
         "juices": {
-            "question_n": 21,
             "question": "Do you drink fruit juices?",
             "options": [
                 "Yes",
@@ -263,7 +246,6 @@
             "next": "fruit"
         },
         "fruit": {
-            "question_n": 22,
             "question": "Do you eat fruit?",
             "options": [
                 "Yes",
@@ -275,7 +257,6 @@
             }
         },
         "dried_fruit": {
-            "question_n": 23,
             "question": "How many times a week do you eat dried fruit?",
             "options": [
                 "Never",
@@ -287,7 +268,6 @@
             "next": "high_low_sugar_fruit"
         },
         "high_low_sugar_fruit": {
-            "question_n": 24,
             "question": "Do you eat the following?",
             "options": [
                 "list of high sugar fruit",
@@ -296,7 +276,6 @@
             "next": "alcohol"
         },
         "alcohol": {
-            "question_n": 25,
             "question": "How many times a week do you drink alcohol?",
             "options": [
                 "Never",
@@ -308,7 +287,6 @@
             "next": "sodas"
         },
         "sodas": {
-            "question_n": 26,
             "question": "How many times a week do you drink sodas?",
             "options": [
                 "Never",
@@ -322,7 +300,6 @@
             "note": "Sodas include Fanta, Sprite, Coke, ..."
         },
         "ultra_processed_food": {
-            "question_n": 27,
             "question": "How many times a week do you eat ultra-processed food (e.g. Chips, Candy)?",
             "options": [
                 "Never",
@@ -336,7 +313,6 @@
             "note": "Ultra Processed Foods include Chips and Candy, ..."
         },
         "nuts": {
-            "question_n": 28,
             "question": "How many times a week do you eat nuts?",
             "options": [
                 "Never",
@@ -350,7 +326,6 @@
             "note": "Nuts include cashew, peanuts, ..."
         },
         "substitutes": {
-            "question_n": 29,
             "question": "How many times a week do you eat plant based substitues?",
             "options": [
                 "Never",
@@ -364,7 +339,6 @@
             "note": "Plant-based Substitutes include tofu, tempeh, ..."
         },
         "supplements": {
-            "question_n": 30,
             "question": "Do you take supplements?",
             "options": [
                 "Yes",
