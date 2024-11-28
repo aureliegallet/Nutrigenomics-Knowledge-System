@@ -25,11 +25,23 @@ def show_knowlegde():
 def save_data():
     try:
         answer = request.get_json()
-        with open(knowledge_base, 'r') as json_file:
-            knowledge = json.load(json_file)
+        with open(knowledge_base, 'r') as knowledge_base_file:
+            knowledge = json.load(knowledge_base_file)
         knowledge["Facts"].append(answer)
-        with open(knowledge_base, 'w') as json_file:
-            json.dump(knowledge, json_file, indent=4)
+        with open(knowledge_base, 'w') as knowledge_base_file:
+            json.dump(knowledge, knowledge_base_file, indent=4)
         return jsonify({'message': 'Answer saved successfully!'}), 200
+    except Exception as e:
+        return jsonify({'message': 'Error occurred', 'error': str(e)}), 500
+    
+@app.route('/reset-kb', methods=['DELETE'])
+def reset_kb():
+    try:
+        with open(knowledge_base, 'r') as knowledge_base_file:
+            knowledge = json.load(knowledge_base_file)  
+        knowledge["Facts"] = []
+        with open(knowledge_base, 'w') as knowledge_base_file:
+            json.dump(knowledge, knowledge_base_file, indent=4)
+        return jsonify({"message": "Facts cleared successfully"}), 200
     except Exception as e:
         return jsonify({'message': 'Error occurred', 'error': str(e)}), 500
