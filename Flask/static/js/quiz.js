@@ -118,7 +118,10 @@ function nextQuestion(next) {
         form.innerHTML = `
             <h1>Results</h1>
             <p>Our diagnosis</p>
+            <button id="OK" class="button">OK</button>
         `;
+        const okButton = document.getElementById("OK");
+        okButton.addEventListener("click", resetKB);
     }
 }
 
