@@ -7,6 +7,7 @@ nextButton.addEventListener("click", nextClicked);
 const folderElement = document.getElementById("folder");
 const titleElement = document.getElementById("title");
 const noteElement = document.getElementById("note");
+const errorElement = document.getElementById("error-notification");
 
 async function loadQuestions() {
     /* Load json file */
@@ -74,6 +75,9 @@ function nextClicked(e){
     e.preventDefault();
     const answer = document.querySelector('input[name="option"]:checked');
     if (answer) {
+        /* Hide error div */
+        errorElement.style.visibility = "hidden"; 
+
         /* Send answer to backend */
         const answerJson = { 
             question: questions[currentQuestion].question,
@@ -99,7 +103,8 @@ function nextClicked(e){
         }
         nextQuestion(next) 
     } else {
-        console.log('You have to select an option.'); /* TODO: Make a div to display error message */
+        /* Show error div */
+        errorElement.style.visibility = "visible"; 
     }
 }
 
@@ -139,4 +144,3 @@ function resetKB() {
 }
 
 loadQuestions();
-/* TODO: Talk about when we should delete facts. */

@@ -36,3 +36,12 @@ label {
     background-color: #8bdaa0;
 }
 
+.error-notification {
+    margin-top: 20px;
+    margin-right: 40px;
+    padding: 10px;
+    color: #24523a;
+    background-color: #8bdaa0;
+    visibility: hidden;
+    border-radius: 2px;
+}
