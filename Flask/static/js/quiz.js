@@ -126,7 +126,7 @@ function nextQuestion(next) {
                 form.innerHTML = `
                     <h1>Results</h1>
                     <p>Your gut health is ${health}.</p><br/>
-                    <img src="../static/img/gut.jpeg" alt="gut" width=100%>
+                    <img src="../static/img/gut.png" alt="gut" width=90%>
                     <p>Image taken from Microsoft Designer<p><br/>
                     <button id="OK" class="button">OK</button>
                 `;
