@@ -21,6 +21,16 @@ def show_expert():
 def show_knowlegde():
     return render_template('knowledge.html')
 
+@app.route('/get-score', methods=['GET'])
+def get_score():
+    try:
+        with open(knowledge_base, 'r') as knowledge_base_file:
+            knowledge = json.load(knowledge_base_file)
+        score = knowledge["Score"]
+        return jsonify({"Score": score}), 200
+    except Exception as e:
+        return jsonify({'message': 'Error occurred', 'error': str(e)}), 500
+
 @app.route('/add-to-kb', methods=['POST'])
 def save_data():
     try:

@@ -119,13 +119,20 @@ function nextQuestion(next) {
         showQuestion();
     } else {
         const form = document.querySelector("form"); 
-        form.innerHTML = `
-            <h1>Results</h1>
-            <p>Our diagnosis</p>
-            <button id="OK" class="button">OK</button>
-        `;
-        const okButton = document.getElementById("OK");
-        okButton.addEventListener("click", resetKB);
+        fetch('/get-score')
+            .then(response => response.json())  
+            .then(data => {
+                form.innerHTML = `
+                    <h1>Results</h1>
+                    <p>Your score is ${data.Score} out of 72.</p>
+                    <button id="OK" class="button">OK</button>
+                `;
+                const okButton = document.getElementById("OK");
+                okButton.addEventListener("click", resetKB);
+            })
+            .catch(error => {
+                console.error("Error fetching score:", error);
+            });   
     }
 }
 
