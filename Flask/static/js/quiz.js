@@ -127,7 +127,7 @@ function nextQuestion(next) {
                     <h1>Results</h1>
                     <p>Your gut health is ${health}.</p><br/>
                     <img src="../static/img/gut.jpeg" alt="gut" width=100%>
-                    <p>Images taken from Microsoft Designer<p><br/>
+                    <p>Image taken from Microsoft Designer<p><br/>
                     <button id="OK" class="button">OK</button>
                 `;
                 const okButton = document.getElementById("OK");
