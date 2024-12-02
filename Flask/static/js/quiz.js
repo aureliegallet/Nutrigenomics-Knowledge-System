@@ -80,7 +80,7 @@ function nextClicked(e){
 
         /* Send answer to backend */
         const answerJson = { 
-            question: questions[currentQuestion].question,
+            questionKey: currentQuestion,
             option: answer.value 
         };
         fetch('/add-to-kb', {
@@ -93,7 +93,6 @@ function nextClicked(e){
         .catch(error => {
             console.error('Error:', error);
         });
-
 
         /* Go to next question */
         /* Check if we are currently branching according to the answer */

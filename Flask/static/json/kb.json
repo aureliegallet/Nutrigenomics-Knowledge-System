@@ -9,6 +9,12 @@
                 "31-50",
                 "51+"
             ],
+            "points": {
+                "0-18": 3,
+                "19-30": 2,
+                "31-50": 1,
+                "51+": 0
+            },
             "next": "sex"
         },
         "sex": {
@@ -18,6 +24,11 @@
                 "Male",
                 "Other"
             ],
+            "points": {
+                "Female": 0,
+                "Male": 0,
+                "Other": 0
+            },
             "next": "BMI"
         },
         "BMI": {
@@ -29,6 +40,13 @@
                 "30-39.9",
                 "over 40"
             ],
+            "points": {
+                "under 18.5>": 1,
+                "18.5 - 24.9": 3,
+                "25-29.9": 2,
+                "30-39.9": 1,
+                "over 40": 0
+            },
             "next": "sleep"
         },
         "sleep": {
@@ -37,6 +55,10 @@
                 "Yes",
                 "No"
             ],
+            "points": {
+                "Yes": 2,
+                "No": 0
+            },
             "next": "exercise"
         },
         "exercise": {
@@ -47,6 +69,12 @@
                 "3 - 5",
                 "5+"
             ],
+            "points": {
+                "less than 1": 0,
+                "1 - 3": 1,
+                "3 - 5": 2,
+                "5+": 3
+            },
             "next": "vegetables"
         },
         "vegetables": {
@@ -55,6 +83,10 @@
                 "Yes",
                 "No"
             ],
+            "points": {
+                "Yes": 2,
+                "No": 0
+            },
             "next": {
                 "Yes": "leafy_greens",
                 "No": "animal_products"
@@ -69,6 +101,13 @@
                 "5 - 6",
                 "Every day"
             ],
+            "points": {
+                "Never": 0,
+                "1 - 2": 1,
+                "3 - 4": 2,
+                "5 - 6": 3,
+                "Every day": 4
+            },
             "next": "legumes",
             "title": "Leafy Greens",
             "note": "Leafy greens include kale, spinach, arugula, beets, turnips, ..."
@@ -82,6 +121,13 @@
                 "5 - 6",
                 "Every day"
             ],
+            "points": {
+                "Never": 0,
+                "1 - 2": 1,
+                "3 - 4": 2,
+                "5 - 6": 3,
+                "Every day": 4
+            },
             "next": "other_vegetables",
             "title": "Legumes",
             "note": "Legumes include beans, chickpeas, peanuts, lentils, tamarind, ..."
@@ -95,6 +141,13 @@
                 "5 - 6",
                 "Every day"
             ],
+            "points": {
+                "Never": 0,
+                "1 - 2": 1,
+                "3 - 4": 2,
+                "5 - 6": 3,
+                "Every day": 4
+            },
             "next": "animal_products"
         },
         "animal_products": {
@@ -103,6 +156,10 @@
                 "Yes",
                 "No"
             ],
+            "points": {
+                "Yes": 0,
+                "No": 2
+            },
             "next": {
                 "Yes": "meat",
                 "No": "juices"
@@ -114,6 +171,10 @@
                 "Yes",
                 "No"
             ],
+            "points": {
+                "Yes": 0,
+                "No": 1
+            },
             "next": {
                 "Yes": "red_meat",
                 "No": "fish"
@@ -128,6 +189,13 @@
                 "5 - 6",
                 "Every day"
             ],
+            "points": {
+                "Never": 4,
+                "1 - 2": 2,
+                "3 - 4": 1,
+                "5 - 6": 0,
+                "Every day": 0
+            },
             "next": "white_meat",
             "title": "Red Meats",
             "note": "Red Meats include beef, horse, bacon, mutton, venison, ..."
@@ -141,6 +209,13 @@
                 "5 - 6",
                 "Every day"
             ],
+            "points": {
+                "Never": 2,
+                "1 - 2": 1,
+                "3 - 4": 0,
+                "5 - 6": 0,
+                "Every day": 0
+            },
             "next": "fish",
             "title": "White Meats",
             "note": "White Meats include rabbit, chicken, turkey, ..."
@@ -151,6 +226,10 @@
                 "Yes",
                 "No"
             ],
+            "points": {
+                "Yes": 1,
+                "No": 0
+            },
             "next": {
                 "Yes": "lean_fish",
                 "No": "dairy"
@@ -165,6 +244,13 @@
                 "5 - 6",
                 "Every day"
             ],
+            "points": {
+                "Never": 0,
+                "1 - 2": 1,
+                "3 - 4": 2,
+                "5 - 6": 1,
+                "Every day": 0
+            },
             "next": "fatty_fish",
             "title": "Lean Fish",
             "note": "Lean Fish include cod, flounder, sole, perch, halibut, ..."
@@ -178,6 +264,13 @@
                 "5 - 6",
                 "Every day"
             ],
+            "points": {
+                "Never": 0,
+                "1 - 2": 4,
+                "3 - 4": 3,
+                "5 - 6": 2,
+                "Every day": 1
+            },
             "next": "dairy",
             "title": "Fatty Fish",
             "note": "Fatty Fish include anchovies, herring, mackerel, salmon, sardines, ..."
@@ -188,6 +281,10 @@
                 "Yes",
                 "No"
             ],
+            "points": {
+                "Yes": 0,
+                "No": 1
+            },
             "next": {
                 "Yes": "milk",
                 "No": "eggs"
@@ -202,6 +299,13 @@
                 "5 - 6",
                 "Every day"
             ],
+            "points": {
+                "Never": 2,
+                "1 - 2": 1,
+                "3 - 4": 0,
+                "5 - 6": 0,
+                "Every day": 0
+            },
             "next": "yoghurt"
         },
         "yoghurt": {
@@ -213,6 +317,13 @@
                 "5 - 6",
                 "Every day"
             ],
+            "points": {
+                "Never": 0,
+                "1 - 2": 2,
+                "3 - 4": 3,
+                "5 - 6": 4,
+                "Every day": 5
+            },
             "next": "cheese"
         },
         "cheese": {
@@ -224,6 +335,13 @@
                 "5 - 6",
                 "Every day"
             ],
+            "points": {
+                "Never": 1,
+                "1 - 2": 0,
+                "3 - 4": 0,
+                "5 - 6": 0,
+                "Every day": 0
+            },
             "next": "eggs"
         },
         "eggs": {
@@ -235,6 +353,13 @@
                 "5 - 6",
                 "Every day"
             ],
+            "points": {
+                "Never": 0,
+                "1 - 2": 1,
+                "3 - 4": 2,
+                "5 - 6": 1,
+                "Every day": 0
+            },
             "next": "juices"
         },
         "juices": {
@@ -243,6 +368,10 @@
                 "Yes",
                 "No"
             ],
+            "points": {
+                "Yes": 0,
+                "No": 2
+            },
             "next": "fruit"
         },
         "fruit": {
@@ -251,6 +380,10 @@
                 "Yes",
                 "No"
             ],
+            "points": {
+                "Yes": 2,
+                "No": 0
+            },
             "next": {
                 "Yes": "dried_fruit",
                 "No": "alcohol"
@@ -265,6 +398,13 @@
                 "5 - 6",
                 "Every day"
             ],
+            "points": {
+                "Never": 1,
+                "1 - 2": 2,
+                "3 - 4": 1,
+                "5 - 6": 0,
+                "Every day": 0
+            },
             "next": "high_low_sugar_fruit"
         },
         "high_low_sugar_fruit": {
@@ -273,6 +413,10 @@
                 "list of high sugar fruit",
                 "list of low sugar fruit"
             ],
+            "points": {
+                "list of high sugar fruit": 0,
+                "list of low sugar fruit": 1
+            },
             "next": "alcohol"
         },
         "alcohol": {
@@ -284,6 +428,13 @@
                 "5 - 6",
                 "Every day"
             ],
+            "points": {
+                "Never": 2,
+                "1 - 2": 1,
+                "3 - 4": 0,
+                "5 - 6": 0,
+                "Every day": 0
+            },
             "next": "sodas"
         },
         "sodas": {
@@ -295,6 +446,13 @@
                 "5 - 6",
                 "Every day"
             ],
+            "points": {
+                "Never": 2,
+                "1 - 2": 1,
+                "3 - 4": 0,
+                "5 - 6": 0,
+                "Every day": 0
+            },
             "next": "ultra_processed_food",
             "title": "Sodas",
             "note": "Sodas include Fanta, Sprite, Coke, ..."
@@ -308,6 +466,13 @@
                 "5 - 6",
                 "Every day"
             ],
+            "points": {
+                "Never": 2,
+                "1 - 2": 1,
+                "3 - 4": 0,
+                "5 - 6": 0,
+                "Every day": 0
+            },
             "next": "nuts",
             "title": "Ultra Processed Foods",
             "note": "Ultra Processed Foods include Chips and Candy, ..."
@@ -321,6 +486,13 @@
                 "5 - 6",
                 "Every day"
             ],
+            "points": {
+                "Never": 0,
+                "1 - 2": 1,
+                "3 - 4": 2,
+                "5 - 6": 1,
+                "Every day": 0
+            },
             "next": "substitutes",
             "title": "Nuts",
             "note": "Nuts include cashew, peanuts, ..."
@@ -334,6 +506,13 @@
                 "5 - 6",
                 "Every day"
             ],
+            "points": {
+                "Never": 0,
+                "1 - 2": 1,
+                "3 - 4": 2,
+                "5 - 6": 3,
+                "Every day": 4
+            },
             "next": "supplements",
             "title": "Plant-based Substitutes",
             "note": "Plant-based Substitutes include tofu, tempeh, ..."
@@ -344,11 +523,16 @@
                 "Yes",
                 "No"
             ],
+            "points": {
+                "Yes": 0,
+                "No": 1
+            },
             "next": null
         },
         "more": {
             "question": "list suppplements we want to ask about"
         }
     },
+    "Score": 0,
     "Facts": []
 }

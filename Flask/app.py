@@ -28,6 +28,13 @@ def save_data():
         with open(knowledge_base, 'r') as knowledge_base_file:
             knowledge = json.load(knowledge_base_file)
         knowledge["Facts"].append(answer)
+
+        # Update score
+        question = knowledge["Questions"].get(answer["questionKey"])
+        knowledge["Score"] = knowledge["Score"] + question["points"].get(answer["option"])
+        print(knowledge["Score"])
+
+        # Write to file
         with open(knowledge_base, 'w') as knowledge_base_file:
             json.dump(knowledge, knowledge_base_file, indent=4)
         return jsonify({'message': 'Answer saved successfully!'}), 200
@@ -39,6 +46,7 @@ def reset_kb():
     try:
         with open(knowledge_base, 'r') as knowledge_base_file:
             knowledge = json.load(knowledge_base_file)  
+        knowledge["Score"] = 0
         knowledge["Facts"] = []
         with open(knowledge_base, 'w') as knowledge_base_file:
             json.dump(knowledge, knowledge_base_file, indent=4)
