@@ -122,9 +122,12 @@ function nextQuestion(next) {
         fetch('/get-score')
             .then(response => response.json())  
             .then(data => {
+                health = calculateHealth(data.Score)
                 form.innerHTML = `
                     <h1>Results</h1>
-                    <p>Your score is ${data.Score} out of 72.</p>
+                    <p>Your gut health is ${health}.</p><br/>
+                    <img src="../static/img/gut.jpeg" alt="gut" width=100%>
+                    <p>Images taken from Microsoft Designer<p><br/>
                     <button id="OK" class="button">OK</button>
                 `;
                 const okButton = document.getElementById("OK");
@@ -134,6 +137,23 @@ function nextQuestion(next) {
                 console.error("Error fetching score:", error);
             });   
     }
+}
+
+function calculateHealth(score) {
+    score = (score/72) * 100
+    diagnosis = ""
+    if (score <= 20) {
+        diagnosis = "very poor"
+    } else if (20 < score && score <= 40) {
+        diagnosis = "poor"
+    } else if (40 < score && score <= 60) {
+        diagnosis = "normal"
+    } else if (60 < score && score <= 80) {
+        diagnosis = "good"
+    } else if (80 < score && score <= 100) {
+        diagnosis = "very good"
+    }
+    return diagnosis
 }
 
 function resetKB() {
