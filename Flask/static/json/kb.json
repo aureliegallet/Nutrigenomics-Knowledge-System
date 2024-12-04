@@ -1,6 +1,5 @@
 {
-    "Knowledge Base": [],
-    "Questions": {
+    "Knowledge_Base": {
         "age": {
             "question": "How old are you?",
             "options": [
@@ -533,6 +532,5 @@
             "question": "list suppplements we want to ask about"
         }
     },
-    "Score": 0,
-    "Facts": []
+    "Score": 0
 }

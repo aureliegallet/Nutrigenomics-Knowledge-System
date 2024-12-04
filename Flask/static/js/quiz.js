@@ -15,7 +15,7 @@ async function loadQuestions() {
         const response = await fetch('/static/json/kb.json');
         const data = await response.json();
         
-        questions = data.Questions;
+        questions = data.Knowledge_Base;
         showQuestion(); 
     } catch (error) {
         console.error("Error loading questions:", error);
@@ -83,7 +83,7 @@ function nextClicked(e){
             questionKey: currentQuestion,
             option: answer.value 
         };
-        fetch('/add-to-kb', {
+        fetch('/update-score', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -158,7 +158,7 @@ function calculateHealth(score) {
 
 function resetKB() {
     /* Send reset order to backend */
-    fetch('/reset-kb', {
+    fetch('/reset-score', {
         method: 'DELETE', 
         headers: {
             'Content-Type': 'application/json',
