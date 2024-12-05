@@ -1,3 +1,11 @@
+How often do you eat red meat?
+How often do you eat white meat?
+How often do you eat lean fish?
+How often do you eat fatty fish?
+How often do you drink milk?
+How often do you eat yoghurt?
+How often do you eat cheese?
+How often do you eat eggs?
 Do you drink fruit juices?
 How often do you eat dried fruit?
 Do you eat high or low sugar fruits?
