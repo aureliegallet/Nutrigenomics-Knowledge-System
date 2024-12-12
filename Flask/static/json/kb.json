@@ -14,20 +14,6 @@
                 "31-50": 1,
                 "51+": 0
             },
-            "next": "sex"
-        },
-        "sex": {
-            "question": "What is your biologically determined sex?",
-            "options": [
-                "Female",
-                "Male",
-                "Other"
-            ],
-            "points": {
-                "Female": 0,
-                "Male": 0,
-                "Other": 0
-            },
             "next": "BMI"
         },
         "BMI": {
@@ -82,10 +68,6 @@
                 "Yes",
                 "No"
             ],
-            "points": {
-                "Yes": 2,
-                "No": 0
-            },
             "next": {
                 "Yes": "leafy_greens",
                 "No": "animal_products"
@@ -107,6 +89,13 @@
                 "5 - 6": 3,
                 "Every day": 4
             },
+            "to_save": {
+                "Never": null,
+                "1 - 2": null,
+                "3 - 4": null,
+                "5 - 6": "leafy_greens",
+                "Every day": "leafy_greens"
+            },
             "next": "legumes",
             "title": "Leafy Greens",
             "note": "Leafy greens include kale, spinach, arugula, beets, turnips, ..."
@@ -126,6 +115,13 @@
                 "3 - 4": 2,
                 "5 - 6": 3,
                 "Every day": 4
+            },
+            "to_save": {
+                "Never": null,
+                "1 - 2": null,
+                "3 - 4": null,
+                "5 - 6": "legumes",
+                "Every day": "legumes"
             },
             "next": "other_vegetables",
             "title": "Legumes",
@@ -155,9 +151,13 @@
                 "Yes",
                 "No"
             ],
-            "points": {
-                "Yes": 0,
-                "No": 2
+            "to_save": {
+                "Yes": null,
+                "No": [
+                    "no meat",
+                    "no_fish",
+                    "no_dairy"
+                ]
             },
             "next": {
                 "Yes": "meat",
@@ -170,9 +170,9 @@
                 "Yes",
                 "No"
             ],
-            "points": {
-                "Yes": 0,
-                "No": 1
+            "to_save": {
+                "Yes": null,
+                "No": "no_meat"
             },
             "next": {
                 "Yes": "red_meat",
@@ -225,9 +225,9 @@
                 "Yes",
                 "No"
             ],
-            "points": {
-                "Yes": 1,
-                "No": 0
+            "to_save": {
+                "Yes": null,
+                "No": "no_fish"
             },
             "next": {
                 "Yes": "lean_fish",
@@ -280,9 +280,9 @@
                 "Yes",
                 "No"
             ],
-            "points": {
-                "Yes": 0,
-                "No": 1
+            "to_save": {
+                "Yes": null,
+                "No": "no_dairy"
             },
             "next": {
                 "Yes": "milk",
@@ -379,10 +379,6 @@
                 "Yes",
                 "No"
             ],
-            "points": {
-                "Yes": 2,
-                "No": 0
-            },
             "next": {
                 "Yes": "dried_fruit",
                 "No": "alcohol"
@@ -409,12 +405,12 @@
         "high_low_sugar_fruit": {
             "question": "Do you eat the following?",
             "options": [
-                "list of high sugar fruit",
-                "list of low sugar fruit"
+                "High sugar fruit",
+                "Low sugar fruit"
             ],
             "points": {
-                "list of high sugar fruit": 0,
-                "list of low sugar fruit": 1
+                "High sugar fruit": 2,
+                "Low sugar fruit": 3
             },
             "next": "alcohol"
         },
@@ -492,12 +488,19 @@
                 "5 - 6": 1,
                 "Every day": 0
             },
-            "next": "substitutes",
+            "to_save": {
+                "Never": null,
+                "1 - 2": null,
+                "3 - 4": null,
+                "5 - 6": "nuts",
+                "Every day": "nuts"
+            },
+            "next": "substitutes_food",
             "title": "Nuts",
             "note": "Nuts include cashew, peanuts, ..."
         },
-        "substitutes": {
-            "question": "How many times a week do you eat plant based substitues?",
+        "substitutes_food": {
+            "question": "How many times a week do you eat (not drink) plant based substitues?",
             "options": [
                 "Never",
                 "1 - 2",
@@ -512,9 +515,43 @@
                 "5 - 6": 3,
                 "Every day": 4
             },
-            "next": "supplements",
-            "title": "Plant-based Substitutes",
+            "to_save": {
+                "Never": null,
+                "1 - 2": null,
+                "3 - 4": null,
+                "5 - 6": "substitutes_food",
+                "Every day": "substitutes_food"
+            },
+            "next": "substitutes_drinks",
+            "title": "Plant-based Substitutes (Food)",
             "note": "Plant-based Substitutes include tofu, tempeh, ..."
+        },
+        "substitutes_drinks": {
+            "question": "How many times a week do you drink plant based substitues?",
+            "options": [
+                "Never",
+                "1 - 2",
+                "3 - 4",
+                "5 - 6",
+                "Every day"
+            ],
+            "points": {
+                "Never": 0,
+                "1 - 2": 1,
+                "3 - 4": 2,
+                "5 - 6": 3,
+                "Every day": 4
+            },
+            "to_save": {
+                "Never": null,
+                "1 - 2": null,
+                "3 - 4": null,
+                "5 - 6": "substitutes_drinks",
+                "Every day": "substitutes_drinks"
+            },
+            "next": "supplements",
+            "title": "Plant-based Substitutes (Drinks)",
+            "note": "Plant-based Substitutes include oat milk, soy milk, almond milk..."
         },
         "supplements": {
             "question": "Do you take supplements?",
@@ -522,15 +559,75 @@
                 "Yes",
                 "No"
             ],
-            "points": {
-                "Yes": 0,
-                "No": 1
+            "next": {
+                "Yes": "b12",
+                "No": null
+            }
+        },
+        "b12": {
+            "question": "Do you take b12?",
+            "options": [
+                "Yes",
+                "No"
+            ],
+            "to_save": {
+                "Yes": "b12",
+                "No": null
+            },
+            "next": "omega3"
+        },
+        "omega3": {
+            "question": "Do you take omega3?",
+            "options": [
+                "Yes",
+                "No"
+            ],
+            "to_save": {
+                "Yes": "omega3",
+                "No": null
             },
             "next": null
-        },
-        "more": {
-            "question": "list suppplements we want to ask about"
         }
     },
-    "Score": 0
+    "Score": 0,
+    "Interaction_Rules": [
+        {
+            "conditions": [
+                "no_meat",
+                "nuts",
+                "leafy_greens"
+            ],
+            "points": 6
+        },
+        {
+            "conditions": [
+                "no_meat",
+                "b12"
+            ],
+            "points": 3
+        },
+        {
+            "conditions": [
+                "no_fish",
+                "substitutes_food",
+                "legumes"
+            ],
+            "points": 6
+        },
+        {
+            "conditions": [
+                "no_fish",
+                "omega3"
+            ],
+            "points": 3
+        },
+        {
+            "conditions": [
+                "no_dairy",
+                "substitutes_drinks"
+            ],
+            "points": 4
+        }
+    ],
+    "Saved_Information": []
 }

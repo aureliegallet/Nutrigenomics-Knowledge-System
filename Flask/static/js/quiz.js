@@ -83,7 +83,7 @@ function nextClicked(e){
             questionKey: currentQuestion,
             option: answer.value 
         };
-        fetch('/update-score', {
+        fetch('/update-kb', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -109,7 +109,6 @@ function nextClicked(e){
 
 function nextQuestion(next) {
     currentQuestion = next;
-    console.log(next);
     
     if (currentQuestion != null) {
         const radioButtons = document.querySelectorAll('input[name="option"]');
@@ -140,7 +139,7 @@ function nextQuestion(next) {
 }
 
 function calculateHealth(score) {
-    score = (score/72) * 100
+    score = (score/68) * 100
     diagnosis = ""
     if (score <= 20) {
         diagnosis = "very poor"
@@ -158,7 +157,7 @@ function calculateHealth(score) {
 
 function resetKB() {
     /* Send reset order to backend */
-    fetch('/reset-score', {
+    fetch('/reset-kb', {
         method: 'DELETE', 
         headers: {
             'Content-Type': 'application/json',

@@ -31,7 +31,7 @@ def get_score():
     except Exception as e:
         return jsonify({'message': 'Error occurred', 'error': str(e)}), 500
 
-@app.route('/update-score', methods=['POST'])
+@app.route('/update-kb', methods=['POST'])
 def save_data():
     try:
         answer = request.get_json()
@@ -40,7 +40,16 @@ def save_data():
 
         # Update score
         question = knowledge["Knowledge_Base"].get(answer["questionKey"])
-        knowledge["Score"] = knowledge["Score"] + question["points"].get(answer["option"])
+        if "points" in question:
+            knowledge["Score"] = knowledge["Score"] + question["points"].get(answer["option"])
+
+        # Update saved information
+        if "to_save" in question and question["to_save"].get(answer["option"]) != None:
+            information = question["to_save"].get(answer["option"])
+            if isinstance(information, str):
+                knowledge["Saved_Information"].append(information)
+            elif isinstance(information, list): # For the case where we have to add no meat, no fish and no dairy at the same time
+                knowledge["Saved_Information"].extend(information)
 
         # Write to file
         with open(knowledge_base, 'w') as knowledge_base_file:
@@ -49,12 +58,13 @@ def save_data():
     except Exception as e:
         return jsonify({'message': 'Error occurred', 'error': str(e)}), 500
     
-@app.route('/reset-score', methods=['DELETE'])
+@app.route('/reset-kb', methods=['DELETE'])
 def reset_kb():
     try:
         with open(knowledge_base, 'r') as knowledge_base_file:
             knowledge = json.load(knowledge_base_file)  
         knowledge["Score"] = 0
+        knowledge["Saved_Information"] = []
         with open(knowledge_base, 'w') as knowledge_base_file:
             json.dump(knowledge, knowledge_base_file, indent=4)
         return jsonify({"message": "Facts cleared successfully"}), 200
