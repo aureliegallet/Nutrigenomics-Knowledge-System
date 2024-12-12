@@ -51,6 +51,14 @@ def save_data():
             elif isinstance(information, list): # For the case where we have to add no meat, no fish and no dairy at the same time
                 knowledge["Saved_Information"].extend(information)
 
+        # Check for interaction rules
+        for rule in knowledge["Interaction_Rules"]:
+            if all(condition in knowledge["Saved_Information"] for condition in rule["conditions"]):
+                knowledge["Score"] = knowledge["Score"] + rule["points"]
+                for condition in rule["conditions"]:
+                    knowledge["Saved_Information"].remove(condition)
+                    print(knowledge["Saved_Information"])
+
         # Write to file
         with open(knowledge_base, 'w') as knowledge_base_file:
             json.dump(knowledge, knowledge_base_file, indent=4)
