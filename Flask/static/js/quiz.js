@@ -149,7 +149,7 @@ function calculateHealth(score) {
         diagnosis = "normal"
     } else if (60 < score && score <= 80) {
         diagnosis = "good"
-    } else if (80 < score && score <= 100) {
+    } else if (80 < score) {
         diagnosis = "very good"
     }
     return diagnosis

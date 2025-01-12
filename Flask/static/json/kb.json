@@ -589,7 +589,7 @@
             "next": null
         }
     },
-    "Score": 10,
+    "Score": 0,
     "Interaction_Rules": [
         {
             "conditions": [
@@ -629,8 +629,5 @@
             "points": 4
         }
     ],
-    "Saved_Information": [
-        "no_fish",
-        "no_dairy"
-    ]
+    "Saved_Information": []
 }
