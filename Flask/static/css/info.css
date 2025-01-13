@@ -1,0 +1,40 @@
+.info {
+    margin: 20px;
+}
+.json-translated {
+    background-color: #ceedd2;
+}
+.profile-card {
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;    
+    max-width: 300px;
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 ); 
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    
+
+}
+
+.title {
+    color: #24523a;
+    font-size: 18px;
+}
+
+.institution {
+    color: #1c6f56
+}
+
+.ORCID-link  {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #a5e9b5;
+}
+
+.blob {
+    line-height: 1.5;
+}
