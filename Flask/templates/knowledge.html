@@ -21,848 +21,225 @@
     </nav>
 
     <div class="knowledge">
-        <h1> Knowledge view! </h1>
+        <h1> Behind the system </h1>
         <br/>
-        <p> Here is the knowledge base that we use for our system. <br/> Note: We removed the "Score" and "Saved_Information" keys as they are updated dynamically and are only relevant while taking the quiz.</p>
-        <br/>
-
-<pre class="json">
-
-    Knowledge_Base:
-        How old are you?
-            0-18: 3 points
-            19-30: 2 points
-            31-50: 1 point
-            51+: 0 points
+        <p> We acknowledge that gut health is almost impossible to quantify. 
+            However, there are many different pieces of evidence of various foods having a causal effect on improving or deteriorating gut health. 
+            We have worked with our expert to extract such pieces of evidence and represent them in a knowledge system. 
+            An example of evidence is that eating vegetables, nuts, fish, fermented foods (like yoghurt) improves general gut health. 
+            On the contrary, eating a lot of meat, not exercising, and drinking to much alcohol and sodas reduces gut health.  
+            In an attempt to stay nuanced and accurate, but still reach a result that can be shared with users of the knowledge system, we chose to categorise diets in five categories.
+            These categories are: very poor, poor, normal, good, very good. <br/> <br/> 
             
-        What is your BMI?
-            under 18.5>: 1 point
-            18.5 - 24.9: 3 points
-            25-29.9: 2 points
-            30-39.9: 1 point
-            over 40: 0 points
-
-        With the amount you sleep do you feel well rested?
-            Yes: 2 points
-            No: 0 points
+            To achieve such categorisation, our system relies on a score system extracted from the pieces of evidence. 
+            The maximum achievable score is 70. 
+            For most questions, each answer option is tied to a certain number of points. 
+            These points are then tallied along with aditional points gathered from the combination of several of your answers. 
+            Below, we have included all questions, answers and points. Furthermore, we have included which answer combinations lead to the extra points. <br/> <br/> 
             
-        How many times a week do you exercise?
-            less than 1: 0 points
-            1 - 3: 1 point
-            3 - 5: 2 points
-            5+: 3 points
+            Note: We encourage you to first reply truthfully to our questions and then seek ways to improve your diet on this page. </p> <br/> 
 
-        Do you eat vegetables?
-            No points awarded
+<pre class="json-translated">
 
-        How often do you eat leafy greens in a week?
-            Never: 0 points
-            1 - 2: 1 point
-            3 - 4: 2 points
-            5 - 6: 3 points
-            Every day: 4 points
-
-        How often do you eat legumes in a week?
-            Never: 0 points
-            1 - 2: 1 point
-            3 - 4: 2 points
-            5 - 6: 3 points
-            Every day: 4 points
-            
-        How often do you eat other vegetables in a week?
-            Never: 0 points
-            1 - 2: 1 point
-            3 - 4: 2 points
-            5 - 6: 3 points
-            Every day: 4 points
-            
-        Do you eat animal products?
-            Yes: 0 points
-            No: 9 points
-
-        Do you eat meat?
-            Yes: 0 points
-            No: 6 points
-
-        How many times a week do you eat red meat?
-            Never: 4 points
-            1 - 2: 2 points
-            3 - 4: 1 point
-            5 - 6: 0 points
-            Every day: 0 points
-
-        How many times a week do you eat white meat?
-            Never: 2 points
-            1 - 2: 1 point
-            3 - 4: 0 points
-            5 - 6: 0 points
-            Every day: 0 points
-
-        Do you eat fish?
-            No points awarded
-            
-        How many times a week do you eat lean fish (e.g. cod, trout)?
-            Never: 0 points
-            1 - 2: 1 point
-            3 - 4: 2 points
-            5 - 6: 1 point
-            Every day: 0 points
-
-        How many times a week do you eat fatty fish (e.g. salmon, tuna)?
-            Never: 0 points
-            1 - 2: 4 points
-            3 - 4: 3 points
-            5 - 6: 2 points
-            Every day: 1 point
-            
-        Do you eat dairy?
-            Yes: 0 points
-            No: 3 points
-
-        How many times a week do you drink milk?
-            Never: 2 points
-            1 - 2: 1 point
-            3 - 4: 0 points
-            5 - 6: 0 points
-            Every day: 0 points
-            
-        How many times a week do you eat yogurt?
-            Never: 0 points
-            1 - 2: 2 points
-            3 - 4: 3 points
-            5 - 6: 4 points
-            Every day: 5 points
-            
-        How many times a week do you eat cheese?
-            Never: 1 point
-            1 - 2: 0 points
-            3 - 4: 0 points
-            5 - 6: 0 points
-            Every day: 0 points
-            
-        How many times a week do you eat eggs?
-            Never: 0 points
-            1 - 2: 1 point
-            3 - 4: 2 points
-            5 - 6: 1 point
-            Every day: 0 points
-            
-        Do you drink fruit juices?
-            Yes: 0 points
-            No: 2 points
-
-        Do you eat fruit?
-            No points awarded
+    How old are you?
+        0-18: 3 points
+        19-30: 2 points
+        31-50: 1 point
+        51+: 0 points
         
-        How many times a week do you eat dried fruit?
-            Never: 1 point
-            1 - 2: 2 points
-            3 - 4: 1 point
-            5 - 6: 0 points
-            Every day: 0 points
-            
-        Do you eat the following?
-            High sugar fruit: 2 points
-            Low sugar fruit: 3 points
-            
-        How many times a week do you drink alcohol?
-            Never: 2 points
-            1 - 2: 1 point
-            3 - 4: 0 points
-            5 - 6: 0 points
-            Every day: 0 points
-            
-        How many times a week do you drink sodas?
-            Never: 2 points
-            1 - 2: 1 point
-            3 - 4: 0 points
-            5 - 6: 0 points
-            Every day: 0 points
-            
-        How many times a week do you eat ultra-processed food (e.g. Chips, Candy)?
-            Never: 2 points
-            1 - 2: 1 point
-            3 - 4: 0 points
-            5 - 6: 0 points
-            Every day: 0 points
-            
-        How many times a week do you eat nuts?
-            Never: 0 points
-            1 - 2: 1 point
-            3 - 4: 2 points
-            5 - 6: 1 point
-            Every day: 0 points
-            
-        How many times a week do you eat (not drink) plant based substitues?
-            Never: 0 points
-            1 - 2: 1 point
-            3 - 4: 2 points
-            5 - 6: 3 points
-            Every day: 4 points
-            
-        How many times a week do you drink plant based substitues?
-            Never: 0 points
-            1 - 2: 1 point
-            3 - 4: 2 points
-            5 - 6: 3 points
-            Every day: 4 points
-            
-        Do you take supplements?
-            No points awarded
+    What is your BMI?
+        under 18.5>: 1 point
+        18.5 - 24.9: 3 points
+        25-29.9: 2 points
+        30-39.9: 1 point
+        over 40: 0 points
 
-        Do you take b12?
-            Yes: 3 points awarded if combined with no meat consumption
-            No: 0 points
-
-        Do you take omega3?
-            Yes: 3 points awarded if combined with no fish consumption
-            No: 0 points
-
-        Additionally:
-        - We give 6 points if the user does not consume meat 
-        but consumes nuts and leafy greens at least 5 times a week.
-        - We give 6 points if the user does not consume fish 
-        but consumes substitue foods (not drinks) and legumes at least 5 times a week.
-        - We give 4 points if the user does not consume dairy
-        but consumes substitue drinks at least 5 times a week.
+    With the amount you sleep do you feel well rested?
+        Yes: 2 points
+        No: 0 points
         
-</pre>
+    How many times a week do you exercise?
+        less than 1: 0 points
+        1 - 3: 1 point
+        3 - 5: 2 points
+        5+: 3 points
 
-<pre class="json">
+    Do you eat vegetables?
+        No points awarded
+
+    How often do you eat leafy greens in a week?
+        Never: 0 points
+        1 - 2: 1 point
+        3 - 4: 2 points
+        5 - 6: 3 points
+        Every day: 4 points
+
+    How often do you eat legumes in a week?
+        Never: 0 points
+        1 - 2: 1 point
+        3 - 4: 2 points
+        5 - 6: 3 points
+        Every day: 4 points
+        
+    How often do you eat other vegetables in a week?
+        Never: 0 points
+        1 - 2: 1 point
+        3 - 4: 2 points
+        5 - 6: 3 points
+        Every day: 4 points
+        
+    Do you eat animal products?
+        Yes: 0 points
+        No: 9 points
+
+    Do you eat meat?
+        Yes: 0 points
+        No: 6 points
+
+    How many times a week do you eat red meat?
+        Never: 4 points
+        1 - 2: 2 points
+        3 - 4: 1 point
+        5 - 6: 0 points
+        Every day: 0 points
+
+    How many times a week do you eat white meat?
+        Never: 2 points
+        1 - 2: 1 point
+        3 - 4: 0 points
+        5 - 6: 0 points
+        Every day: 0 points
+
+    Do you eat fish?
+        No points awarded
+        
+    How many times a week do you eat lean fish (e.g. cod, trout)?
+        Never: 0 points
+        1 - 2: 1 point
+        3 - 4: 2 points
+        5 - 6: 1 point
+        Every day: 0 points
+
+    How many times a week do you eat fatty fish (e.g. salmon, tuna)?
+        Never: 0 points
+        1 - 2: 4 points
+        3 - 4: 3 points
+        5 - 6: 2 points
+        Every day: 1 point
+        
+    Do you eat dairy?
+        Yes: 0 points
+        No: 3 points
+
+    How many times a week do you drink milk?
+        Never: 2 points
+        1 - 2: 1 point
+        3 - 4: 0 points
+        5 - 6: 0 points
+        Every day: 0 points
+        
+    How many times a week do you eat yogurt?
+        Never: 0 points
+        1 - 2: 2 points
+        3 - 4: 3 points
+        5 - 6: 4 points
+        Every day: 5 points
+        
+    How many times a week do you eat cheese?
+        Never: 1 point
+        1 - 2: 0 points
+        3 - 4: 0 points
+        5 - 6: 0 points
+        Every day: 0 points
+        
+    How many times a week do you eat eggs?
+        Never: 0 points
+        1 - 2: 1 point
+        3 - 4: 2 points
+        5 - 6: 1 point
+        Every day: 0 points
+        
+    Do you drink fruit juices?
+        Yes: 0 points
+        No: 2 points
+
+    Do you eat fruit?
+        No points awarded
     
-    {
-        "Knowledge_Base": {
-            "age": {
-                "question": "How old are you?",
-                "options": [
-                    "0-18",
-                    "19-30",
-                    "31-50",
-                    "51+"
-                ],
-                "points": {
-                    "0-18": 3,
-                    "19-30": 2,
-                    "31-50": 1,
-                    "51+": 0
-                },
-                "next": "BMI"
-            },
-            "BMI": {
-                "question": "What is your BMI? You can calculate it at the following link: <a href='https://www.calculator.net/bmi-calculator.html'>BMI Calculator</a>",
-                "options": [
-                    "under 18.5>",
-                    "18.5 - 24.9",
-                    "25-29.9",
-                    "30-39.9",
-                    "over 40"
-                ],
-                "points": {
-                    "under 18.5>": 1,
-                    "18.5 - 24.9": 3,
-                    "25-29.9": 2,
-                    "30-39.9": 1,
-                    "over 40": 0
-                },
-                "next": "sleep"
-            },
-            "sleep": {
-                "question": "With the amount you sleep do you feel well rested?",
-                "options": [
-                    "Yes",
-                    "No"
-                ],
-                "points": {
-                    "Yes": 2,
-                    "No": 0
-                },
-                "next": "exercise"
-            },
-            "exercise": {
-                "question": "How many times a week do you exercise?",
-                "options": [
-                    "less than 1",
-                    "1 - 3",
-                    "3 - 5",
-                    "5+"
-                ],
-                "points": {
-                    "less than 1": 0,
-                    "1 - 3": 1,
-                    "3 - 5": 2,
-                    "5+": 3
-                },
-                "next": "vegetables"
-            },
-            "vegetables": {
-                "question": "Do you eat vegetables?",
-                "options": [
-                    "Yes",
-                    "No"
-                ],
-                "next": {
-                    "Yes": "leafy_greens",
-                    "No": "animal_products"
-                }
-            },
-            "leafy_greens": {
-                "question": "How often do you eat leafy greens in a week?",
-                "options": [
-                    "Never",
-                    "1 - 2",
-                    "3 - 4",
-                    "5 - 6",
-                    "Every day"
-                ],
-                "points": {
-                    "Never": 0,
-                    "1 - 2": 1,
-                    "3 - 4": 2,
-                    "5 - 6": 3,
-                    "Every day": 4
-                },
-                "to_save": {
-                    "Never": null,
-                    "1 - 2": null,
-                    "3 - 4": null,
-                    "5 - 6": "leafy_greens",
-                    "Every day": "leafy_greens"
-                },
-                "next": "legumes",
-                "title": "Leafy Greens",
-                "note": "Leafy greens include kale, spinach, arugula, beets, turnips, ..."
-            },
-            "legumes": {
-                "question": "How often do you eat legumes in a week?",
-                "options": [
-                    "Never",
-                    "1 - 2",
-                    "3 - 4",
-                    "5 - 6",
-                    "Every day"
-                ],
-                "points": {
-                    "Never": 0,
-                    "1 - 2": 1,
-                    "3 - 4": 2,
-                    "5 - 6": 3,
-                    "Every day": 4
-                },
-                "to_save": {
-                    "Never": null,
-                    "1 - 2": null,
-                    "3 - 4": null,
-                    "5 - 6": "legumes",
-                    "Every day": "legumes"
-                },
-                "next": "other_vegetables",
-                "title": "Legumes",
-                "note": "Legumes include beans, chickpeas, peanuts, lentils, tamarind, ..."
-            },
-            "other_vegetables": {
-                "question": "How often do you eat other vegetables in a week?",
-                "options": [
-                    "Never",
-                    "1 - 2",
-                    "3 - 4",
-                    "5 - 6",
-                    "Every day"
-                ],
-                "points": {
-                    "Never": 0,
-                    "1 - 2": 1,
-                    "3 - 4": 2,
-                    "5 - 6": 3,
-                    "Every day": 4
-                },
-                "next": "animal_products"
-            },
-            "animal_products": {
-                "question": "Do you eat animal products?",
-                "options": [
-                    "Yes",
-                    "No"
-                ],
-                "to_save": {
-                    "Yes": null,
-                    "No": [
-                        "no_meat",
-                        "no_fish",
-                        "no_dairy"
-                    ]
-                },
-                "next": {
-                    "Yes": "meat",
-                    "No": "juices"
-                }
-            },
-            "meat": {
-                "question": "Do you eat meat?",
-                "options": [
-                    "Yes",
-                    "No"
-                ],
-                "to_save": {
-                    "Yes": null,
-                    "No": "no_meat"
-                },
-                "next": {
-                    "Yes": "red_meat",
-                    "No": "fish"
-                }
-            },
-            "red_meat": {
-                "question": "How many times a week do you eat red meat?",
-                "options": [
-                    "Never",
-                    "1 - 2",
-                    "3 - 4",
-                    "5 - 6",
-                    "Every day"
-                ],
-                "points": {
-                    "Never": 4,
-                    "1 - 2": 2,
-                    "3 - 4": 1,
-                    "5 - 6": 0,
-                    "Every day": 0
-                },
-                "next": "white_meat",
-                "title": "Red Meats",
-                "note": "Red Meats include beef, horse, bacon, mutton, venison, ..."
-            },
-            "white_meat": {
-                "question": "How many times a week do you eat white meat?",
-                "options": [
-                    "Never",
-                    "1 - 2",
-                    "3 - 4",
-                    "5 - 6",
-                    "Every day"
-                ],
-                "points": {
-                    "Never": 2,
-                    "1 - 2": 1,
-                    "3 - 4": 0,
-                    "5 - 6": 0,
-                    "Every day": 0
-                },
-                "next": "fish",
-                "title": "White Meats",
-                "note": "White Meats include rabbit, chicken, turkey, ..."
-            },
-            "fish": {
-                "question": "Do you eat fish?",
-                "options": [
-                    "Yes",
-                    "No"
-                ],
-                "to_save": {
-                    "Yes": null,
-                    "No": "no_fish"
-                },
-                "next": {
-                    "Yes": "lean_fish",
-                    "No": "dairy"
-                }
-            },
-            "lean_fish": {
-                "question": "How many times a week do you eat lean fish (e.g. cod, trout)?",
-                "options": [
-                    "Never",
-                    "1 - 2",
-                    "3 - 4",
-                    "5 - 6",
-                    "Every day"
-                ],
-                "points": {
-                    "Never": 0,
-                    "1 - 2": 1,
-                    "3 - 4": 2,
-                    "5 - 6": 1,
-                    "Every day": 0
-                },
-                "next": "fatty_fish",
-                "title": "Lean Fish",
-                "note": "Lean Fish include cod, flounder, sole, perch, halibut, ..."
-            },
-            "fatty_fish": {
-                "question": "How many times a week do you eat fatty fish (e.g. salmon, tuna)?",
-                "options": [
-                    "Never",
-                    "1 - 2",
-                    "3 - 4",
-                    "5 - 6",
-                    "Every day"
-                ],
-                "points": {
-                    "Never": 0,
-                    "1 - 2": 4,
-                    "3 - 4": 3,
-                    "5 - 6": 2,
-                    "Every day": 1
-                },
-                "next": "dairy",
-                "title": "Fatty Fish",
-                "note": "Fatty Fish include anchovies, herring, mackerel, salmon, sardines, ..."
-            },
-            "dairy": {
-                "question": "Do you eat dairy?",
-                "options": [
-                    "Yes",
-                    "No"
-                ],
-                "to_save": {
-                    "Yes": null,
-                    "No": "no_dairy"
-                },
-                "next": {
-                    "Yes": "milk",
-                    "No": "eggs"
-                }
-            },
-            "milk": {
-                "question": "How many times a week do you drink milk?",
-                "options": [
-                    "Never",
-                    "1 - 2",
-                    "3 - 4",
-                    "5 - 6",
-                    "Every day"
-                ],
-                "points": {
-                    "Never": 2,
-                    "1 - 2": 1,
-                    "3 - 4": 0,
-                    "5 - 6": 0,
-                    "Every day": 0
-                },
-                "next": "yoghurt"
-            },
-            "yoghurt": {
-                "question": "How many times a week do you eat yogurt?",
-                "options": [
-                    "Never",
-                    "1 - 2",
-                    "3 - 4",
-                    "5 - 6",
-                    "Every day"
-                ],
-                "points": {
-                    "Never": 0,
-                    "1 - 2": 2,
-                    "3 - 4": 3,
-                    "5 - 6": 4,
-                    "Every day": 5
-                },
-                "next": "cheese"
-            },
-            "cheese": {
-                "question": "How many times a week do you eat cheese?",
-                "options": [
-                    "Never",
-                    "1 - 2",
-                    "3 - 4",
-                    "5 - 6",
-                    "Every day"
-                ],
-                "points": {
-                    "Never": 1,
-                    "1 - 2": 0,
-                    "3 - 4": 0,
-                    "5 - 6": 0,
-                    "Every day": 0
-                },
-                "next": "eggs"
-            },
-            "eggs": {
-                "question": "How many times a week do you eat eggs?",
-                "options": [
-                    "Never",
-                    "1 - 2",
-                    "3 - 4",
-                    "5 - 6",
-                    "Every day"
-                ],
-                "points": {
-                    "Never": 0,
-                    "1 - 2": 1,
-                    "3 - 4": 2,
-                    "5 - 6": 1,
-                    "Every day": 0
-                },
-                "next": "juices"
-            },
-            "juices": {
-                "question": "Do you drink fruit juices?",
-                "options": [
-                    "Yes",
-                    "No"
-                ],
-                "points": {
-                    "Yes": 0,
-                    "No": 2
-                },
-                "next": "fruit"
-            },
-            "fruit": {
-                "question": "Do you eat fruit?",
-                "options": [
-                    "Yes",
-                    "No"
-                ],
-                "next": {
-                    "Yes": "dried_fruit",
-                    "No": "alcohol"
-                }
-            },
-            "dried_fruit": {
-                "question": "How many times a week do you eat dried fruit?",
-                "options": [
-                    "Never",
-                    "1 - 2",
-                    "3 - 4",
-                    "5 - 6",
-                    "Every day"
-                ],
-                "points": {
-                    "Never": 1,
-                    "1 - 2": 2,
-                    "3 - 4": 1,
-                    "5 - 6": 0,
-                    "Every day": 0
-                },
-                "next": "high_low_sugar_fruit"
-            },
-            "high_low_sugar_fruit": {
-                "question": "Do you eat the following?",
-                "options": [
-                    "High sugar fruit",
-                    "Low sugar fruit"
-                ],
-                "points": {
-                    "High sugar fruit": 2,
-                    "Low sugar fruit": 3
-                },
-                "next": "alcohol"
-            },
-            "alcohol": {
-                "question": "How many times a week do you drink alcohol?",
-                "options": [
-                    "Never",
-                    "1 - 2",
-                    "3 - 4",
-                    "5 - 6",
-                    "Every day"
-                ],
-                "points": {
-                    "Never": 2,
-                    "1 - 2": 1,
-                    "3 - 4": 0,
-                    "5 - 6": 0,
-                    "Every day": 0
-                },
-                "next": "sodas"
-            },
-            "sodas": {
-                "question": "How many times a week do you drink sodas?",
-                "options": [
-                    "Never",
-                    "1 - 2",
-                    "3 - 4",
-                    "5 - 6",
-                    "Every day"
-                ],
-                "points": {
-                    "Never": 2,
-                    "1 - 2": 1,
-                    "3 - 4": 0,
-                    "5 - 6": 0,
-                    "Every day": 0
-                },
-                "next": "ultra_processed_food",
-                "title": "Sodas",
-                "note": "Sodas include Fanta, Sprite, Coke, ..."
-            },
-            "ultra_processed_food": {
-                "question": "How many times a week do you eat ultra-processed food (e.g. Chips, Candy)?",
-                "options": [
-                    "Never",
-                    "1 - 2",
-                    "3 - 4",
-                    "5 - 6",
-                    "Every day"
-                ],
-                "points": {
-                    "Never": 2,
-                    "1 - 2": 1,
-                    "3 - 4": 0,
-                    "5 - 6": 0,
-                    "Every day": 0
-                },
-                "next": "nuts",
-                "title": "Ultra Processed Foods",
-                "note": "Ultra Processed Foods include Chips and Candy, ..."
-            },
-            "nuts": {
-                "question": "How many times a week do you eat nuts?",
-                "options": [
-                    "Never",
-                    "1 - 2",
-                    "3 - 4",
-                    "5 - 6",
-                    "Every day"
-                ],
-                "points": {
-                    "Never": 0,
-                    "1 - 2": 1,
-                    "3 - 4": 2,
-                    "5 - 6": 1,
-                    "Every day": 0
-                },
-                "to_save": {
-                    "Never": null,
-                    "1 - 2": null,
-                    "3 - 4": null,
-                    "5 - 6": "nuts",
-                    "Every day": "nuts"
-                },
-                "next": "substitutes_food",
-                "title": "Nuts",
-                "note": "Nuts include cashew, peanuts, ..."
-            },
-            "substitutes_food": {
-                "question": "How many times a week do you eat (not drink) plant based substitues?",
-                "options": [
-                    "Never",
-                    "1 - 2",
-                    "3 - 4",
-                    "5 - 6",
-                    "Every day"
-                ],
-                "points": {
-                    "Never": 0,
-                    "1 - 2": 1,
-                    "3 - 4": 2,
-                    "5 - 6": 3,
-                    "Every day": 4
-                },
-                "to_save": {
-                    "Never": null,
-                    "1 - 2": null,
-                    "3 - 4": null,
-                    "5 - 6": "substitutes_food",
-                    "Every day": "substitutes_food"
-                },
-                "next": "substitutes_drinks",
-                "title": "Plant-based Substitutes (Food)",
-                "note": "Plant-based Substitutes include tofu, tempeh, ..."
-            },
-            "substitutes_drinks": {
-                "question": "How many times a week do you drink plant based substitues?",
-                "options": [
-                    "Never",
-                    "1 - 2",
-                    "3 - 4",
-                    "5 - 6",
-                    "Every day"
-                ],
-                "points": {
-                    "Never": 0,
-                    "1 - 2": 1,
-                    "3 - 4": 2,
-                    "5 - 6": 3,
-                    "Every day": 4
-                },
-                "to_save": {
-                    "Never": null,
-                    "1 - 2": null,
-                    "3 - 4": null,
-                    "5 - 6": "substitutes_drinks",
-                    "Every day": "substitutes_drinks"
-                },
-                "next": "supplements",
-                "title": "Plant-based Substitutes (Drinks)",
-                "note": "Plant-based Substitutes include oat milk, soy milk, almond milk..."
-            },
-            "supplements": {
-                "question": "Do you take supplements?",
-                "options": [
-                    "Yes",
-                    "No"
-                ],
-                "next": {
-                    "Yes": "b12",
-                    "No": null
-                }
-            },
-            "b12": {
-                "question": "Do you take b12?",
-                "options": [
-                    "Yes",
-                    "No"
-                ],
-                "to_save": {
-                    "Yes": "b12",
-                    "No": null
-                },
-                "next": "omega3"
-            },
-            "omega3": {
-                "question": "Do you take omega3?",
-                "options": [
-                    "Yes",
-                    "No"
-                ],
-                "to_save": {
-                    "Yes": "omega3",
-                    "No": null
-                },
-                "next": null
-            }
-        },
-        "Interaction_Rules": [
-            {
-                "conditions": [
-                    "no_meat",
-                    "nuts",
-                    "leafy_greens"
-                ],
-                "points": 6
-            },
-            {
-                "conditions": [
-                    "no_meat",
-                    "b12"
-                ],
-                "points": 3
-            },
-            {
-                "conditions": [
-                    "no_fish",
-                    "substitutes_food",
-                    "legumes"
-                ],
-                "points": 6
-            },
-            {
-                "conditions": [
-                    "no_fish",
-                    "omega3"
-                ],
-                "points": 3
-            },
-            {
-                "conditions": [
-                    "no_dairy",
-                    "substitutes_drinks"
-                ],
-                "points": 4
-            }
-        ]
-    } 
+    How many times a week do you eat dried fruit?
+        Never: 1 point
+        1 - 2: 2 points
+        3 - 4: 1 point
+        5 - 6: 0 points
+        Every day: 0 points
+        
+    Do you eat the following?
+        High sugar fruit: 2 points
+        Low sugar fruit: 3 points
+        
+    How many times a week do you drink alcohol?
+        Never: 2 points
+        1 - 2: 1 point
+        3 - 4: 0 points
+        5 - 6: 0 points
+        Every day: 0 points
+        
+    How many times a week do you drink sodas?
+        Never: 2 points
+        1 - 2: 1 point
+        3 - 4: 0 points
+        5 - 6: 0 points
+        Every day: 0 points
+        
+    How many times a week do you eat ultra-processed food (e.g. Chips, Candy)?
+        Never: 2 points
+        1 - 2: 1 point
+        3 - 4: 0 points
+        5 - 6: 0 points
+        Every day: 0 points
+        
+    How many times a week do you eat nuts?
+        Never: 0 points
+        1 - 2: 1 point
+        3 - 4: 2 points
+        5 - 6: 1 point
+        Every day: 0 points
+        
+    How many times a week do you eat (not drink) plant based substitues?
+        Never: 0 points
+        1 - 2: 1 point
+        3 - 4: 2 points
+        5 - 6: 3 points
+        Every day: 4 points
+        
+    How many times a week do you drink plant based substitues?
+        Never: 0 points
+        1 - 2: 1 point
+        3 - 4: 2 points
+        5 - 6: 3 points
+        Every day: 4 points
+        
+    Do you take supplements?
+        No points awarded
 
+    Do you take b12?
+        Yes: 1 points awarded if combined with no meat consumption
+        No: 0 points
+
+    Do you take omega3?
+        Yes: 1 points awarded if combined with no fish consumption
+        No: 0 points
+
+    Additionally:
+    - We give 3 points if the user does not consume meat 
+    but consumes nuts and leafy greens at least 5 times a week.
+    - We give 3 points if the user does not consume fish 
+    but consumes substitue foods (not drinks) and legumes at least 5 times a week.
+    - We give 2 points if the user does not consume dairy
+    but consumes substitue drinks at least 5 times a week.
+        
 </pre>
+
     </div>
       
     

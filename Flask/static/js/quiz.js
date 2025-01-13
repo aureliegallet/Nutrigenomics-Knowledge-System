@@ -1,5 +1,6 @@
 let questions = {}
 let currentQuestion = "age";
+const MAXIMUMSCORE = 70;
 const questionElement = document.getElementById("question");
 const optionsElement = document.getElementById('options');
 const nextButton = document.getElementById("next");
@@ -139,7 +140,7 @@ function nextQuestion(next) {
 }
 
 function calculateHealth(score) {
-    score = (score/72) * 100
+    score = (score/MAXIMUMSCORE) * 100 
     diagnosis = ""
     if (score <= 20) {
         diagnosis = "very poor"
