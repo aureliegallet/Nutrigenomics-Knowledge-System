@@ -1,9 +1,17 @@
 .info {
     margin: 20px;
 }
+
 .json-translated {
     background-color: #ceedd2;
 }
+
+.green-background {
+    background-color: #ceedd2;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .profile-card {
     background: rgba( 255, 255, 255, 0.25 );
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;    
@@ -13,17 +21,16 @@
     margin: auto;
     text-align: center;
     padding: 10px;
-    
-
 }
 
 .title {
     color: #24523a;
-    font-size: 18px;
+    font-size: 19px;
 }
 
 .institution {
-    color: #1c6f56
+    color: #1c6f56;
+    font-size: 18px;
 }
 
 .ORCID-link  {
@@ -37,4 +44,5 @@
 
 .blob {
     line-height: 1.5;
+    font-size: 17px;
 }
