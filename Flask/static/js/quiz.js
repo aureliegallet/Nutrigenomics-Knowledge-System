@@ -164,6 +164,11 @@ function resetKB() {
             'Content-Type': 'application/json',
         },
     })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error in resetting the knowledge base.');
+        }
+    })
     .catch(error => {
         console.error('Error clearing facts:', error);
     });

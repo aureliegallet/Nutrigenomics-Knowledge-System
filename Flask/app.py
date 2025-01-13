@@ -11,6 +11,7 @@ def show_home():
 
 @app.route("/system")
 def show_system():
+    reset_kb() # So that the kb score and saved information resets when the quiz gets automatically restarted upon page reload or navigation to another page
     return render_template('system.html')
 
 @app.route("/expert")
@@ -57,7 +58,6 @@ def save_data():
                 knowledge["Score"] = knowledge["Score"] + rule["points"]
                 for condition in rule["conditions"]:
                     knowledge["Saved_Information"].remove(condition)
-                    print(knowledge["Saved_Information"])
 
         # Write to file
         with open(knowledge_base, 'w') as knowledge_base_file:
