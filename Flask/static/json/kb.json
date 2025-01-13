@@ -17,7 +17,7 @@
             "next": "BMI"
         },
         "BMI": {
-            "question": "What is your BMI? You can calculate it at the following link: <a href='https://www.calculator.net/bmi-calculator.html'>BMI Calculator</a>",
+            "question": "What is your BMI? You can calculate it at the following link: <a href='https://www.calculator.net/bmi-calculator.html' target='_blank' rel='noopener noreferrer'> BMI Calculator </a>",
             "options": [
                 "under 18.5>",
                 "18.5 - 24.9",
@@ -151,6 +151,10 @@
                 "Yes",
                 "No"
             ],
+            "points": {
+                "Yes": 0,
+                "No": 9
+            },
             "to_save": {
                 "Yes": null,
                 "No": [
@@ -170,6 +174,10 @@
                 "Yes",
                 "No"
             ],
+            "points": {
+                "Yes": 0,
+                "No": 6
+            },
             "to_save": {
                 "Yes": null,
                 "No": "no_meat"
@@ -280,6 +288,10 @@
                 "Yes",
                 "No"
             ],
+            "points": {
+                "Yes": 0,
+                "No": 3
+            },
             "to_save": {
                 "Yes": null,
                 "No": "no_dairy"
@@ -597,14 +609,14 @@
                 "nuts",
                 "leafy_greens"
             ],
-            "points": 6
+            "points": 3
         },
         {
             "conditions": [
                 "no_meat",
                 "b12"
             ],
-            "points": 3
+            "points": 1
         },
         {
             "conditions": [
@@ -612,21 +624,21 @@
                 "substitutes_food",
                 "legumes"
             ],
-            "points": 6
+            "points": 3
         },
         {
             "conditions": [
                 "no_fish",
                 "omega3"
             ],
-            "points": 3
+            "points": 1
         },
         {
             "conditions": [
                 "no_dairy",
                 "substitutes_drinks"
             ],
-            "points": 4
+            "points": 2
         }
     ],
     "Saved_Information": []

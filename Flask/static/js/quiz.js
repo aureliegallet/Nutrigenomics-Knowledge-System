@@ -139,7 +139,7 @@ function nextQuestion(next) {
 }
 
 function calculateHealth(score) {
-    score = (score/68) * 100
+    score = (score/72) * 100
     diagnosis = ""
     if (score <= 20) {
         diagnosis = "very poor"

@@ -25,6 +25,209 @@
         <br/>
         <p> Here is the knowledge base that we use for our system. <br/> Note: We removed the "Score" and "Saved_Information" keys as they are updated dynamically and are only relevant while taking the quiz.</p>
         <br/>
+
+<pre class="json">
+
+    Knowledge_Base:
+        How old are you?
+            0-18: 3 points
+            19-30: 2 points
+            31-50: 1 point
+            51+: 0 points
+            
+        What is your BMI?
+            under 18.5>: 1 point
+            18.5 - 24.9: 3 points
+            25-29.9: 2 points
+            30-39.9: 1 point
+            over 40: 0 points
+
+        With the amount you sleep do you feel well rested?
+            Yes: 2 points
+            No: 0 points
+            
+        How many times a week do you exercise?
+            less than 1: 0 points
+            1 - 3: 1 point
+            3 - 5: 2 points
+            5+: 3 points
+
+        Do you eat vegetables?
+            No points awarded
+
+        How often do you eat leafy greens in a week?
+            Never: 0 points
+            1 - 2: 1 point
+            3 - 4: 2 points
+            5 - 6: 3 points
+            Every day: 4 points
+
+        How often do you eat legumes in a week?
+            Never: 0 points
+            1 - 2: 1 point
+            3 - 4: 2 points
+            5 - 6: 3 points
+            Every day: 4 points
+            
+        How often do you eat other vegetables in a week?
+            Never: 0 points
+            1 - 2: 1 point
+            3 - 4: 2 points
+            5 - 6: 3 points
+            Every day: 4 points
+            
+        Do you eat animal products?
+            Yes: 0 points
+            No: 9 points
+
+        Do you eat meat?
+            Yes: 0 points
+            No: 6 points
+
+        How many times a week do you eat red meat?
+            Never: 4 points
+            1 - 2: 2 points
+            3 - 4: 1 point
+            5 - 6: 0 points
+            Every day: 0 points
+
+        How many times a week do you eat white meat?
+            Never: 2 points
+            1 - 2: 1 point
+            3 - 4: 0 points
+            5 - 6: 0 points
+            Every day: 0 points
+
+        Do you eat fish?
+            No points awarded
+            
+        How many times a week do you eat lean fish (e.g. cod, trout)?
+            Never: 0 points
+            1 - 2: 1 point
+            3 - 4: 2 points
+            5 - 6: 1 point
+            Every day: 0 points
+
+        How many times a week do you eat fatty fish (e.g. salmon, tuna)?
+            Never: 0 points
+            1 - 2: 4 points
+            3 - 4: 3 points
+            5 - 6: 2 points
+            Every day: 1 point
+            
+        Do you eat dairy?
+            Yes: 0 points
+            No: 3 points
+
+        How many times a week do you drink milk?
+            Never: 2 points
+            1 - 2: 1 point
+            3 - 4: 0 points
+            5 - 6: 0 points
+            Every day: 0 points
+            
+        How many times a week do you eat yogurt?
+            Never: 0 points
+            1 - 2: 2 points
+            3 - 4: 3 points
+            5 - 6: 4 points
+            Every day: 5 points
+            
+        How many times a week do you eat cheese?
+            Never: 1 point
+            1 - 2: 0 points
+            3 - 4: 0 points
+            5 - 6: 0 points
+            Every day: 0 points
+            
+        How many times a week do you eat eggs?
+            Never: 0 points
+            1 - 2: 1 point
+            3 - 4: 2 points
+            5 - 6: 1 point
+            Every day: 0 points
+            
+        Do you drink fruit juices?
+            Yes: 0 points
+            No: 2 points
+
+        Do you eat fruit?
+            No points awarded
+        
+        How many times a week do you eat dried fruit?
+            Never: 1 point
+            1 - 2: 2 points
+            3 - 4: 1 point
+            5 - 6: 0 points
+            Every day: 0 points
+            
+        Do you eat the following?
+            High sugar fruit: 2 points
+            Low sugar fruit: 3 points
+            
+        How many times a week do you drink alcohol?
+            Never: 2 points
+            1 - 2: 1 point
+            3 - 4: 0 points
+            5 - 6: 0 points
+            Every day: 0 points
+            
+        How many times a week do you drink sodas?
+            Never: 2 points
+            1 - 2: 1 point
+            3 - 4: 0 points
+            5 - 6: 0 points
+            Every day: 0 points
+            
+        How many times a week do you eat ultra-processed food (e.g. Chips, Candy)?
+            Never: 2 points
+            1 - 2: 1 point
+            3 - 4: 0 points
+            5 - 6: 0 points
+            Every day: 0 points
+            
+        How many times a week do you eat nuts?
+            Never: 0 points
+            1 - 2: 1 point
+            3 - 4: 2 points
+            5 - 6: 1 point
+            Every day: 0 points
+            
+        How many times a week do you eat (not drink) plant based substitues?
+            Never: 0 points
+            1 - 2: 1 point
+            3 - 4: 2 points
+            5 - 6: 3 points
+            Every day: 4 points
+            
+        How many times a week do you drink plant based substitues?
+            Never: 0 points
+            1 - 2: 1 point
+            3 - 4: 2 points
+            5 - 6: 3 points
+            Every day: 4 points
+            
+        Do you take supplements?
+            No points awarded
+
+        Do you take b12?
+            Yes: 3 points awarded if combined with no meat consumption
+            No: 0 points
+
+        Do you take omega3?
+            Yes: 3 points awarded if combined with no fish consumption
+            No: 0 points
+
+        Additionally:
+        - We give 6 points if the user does not consume meat 
+        but consumes nuts and leafy greens at least 5 times a week.
+        - We give 6 points if the user does not consume fish 
+        but consumes substitue foods (not drinks) and legumes at least 5 times a week.
+        - We give 4 points if the user does not consume dairy
+        but consumes substitue drinks at least 5 times a week.
+        
+</pre>
+
 <pre class="json">
     
     {
