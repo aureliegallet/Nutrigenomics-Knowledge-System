@@ -611,7 +611,7 @@
             "next": null
         }
     },
-    "Score": 2,
+    "Score": 28,
     "Interaction_Rules": [
         {
             "conditions": [
@@ -651,12 +651,20 @@
             "points": 2
         }
     ],
-    "Saved_Information": [],
+    "Saved_Information": [
+        "more_vegetables",
+        "legumes",
+        "no_meat",
+        "no_fish",
+        "no_fruit",
+        "nuts",
+        "substitutes_drinks"
+    ],
     "Suggestions": {
         "no_vegetables": "The daily consumption of vegetables is crucial in improving your gut health.",
         "more_vegetables": "It is important that you consume a variety of vegetables, particularly a lot of leafy greens and legumes.",
         "yes_meat": "We recommend moderating meat consumption as it has been linked to increased risk of certain health issues.",
-        "no_fish": "It is important to increase fish consumption to a few times a week as it contains beneficial amega-3 fatty acids and is linked to brain health.",
+        "no_fish": "It is important to increase fish consumption to a few times a week as it contains beneficial omega-3 fatty acids and is linked to brain health.",
         "no_dairy": "While the benefits of dairy in general is nuanced, yoghurt is often cited as beneficial for gut health and could be added to your diet.",
         "no_fruit": "Consider increasing fruit intake as they are a rich source of fiber, vitamins, minerals, and phytochemicals that can contribute to overall health and potentially benefit gut health."
     }
