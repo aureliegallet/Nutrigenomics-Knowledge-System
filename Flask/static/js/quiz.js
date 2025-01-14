@@ -135,6 +135,7 @@ function nextQuestion(next) {
                     <p>Your gut health is ${health}.</p><br/>
                     <h2>Suggestions for Improvement:</h2>
                     <ul id="suggestions"></ul>
+                    </br>
                     <p> Make sure to look at our Knowledge Page to find out specifically how to improve your diet. </p>
                     </br>
                     <img src="../static/img/gut.png" alt="gut" width=90%>
