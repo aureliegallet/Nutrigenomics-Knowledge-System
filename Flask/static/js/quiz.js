@@ -10,9 +10,11 @@ const titleElement = document.getElementById("title");
 const noteElement = document.getElementById("note");
 const errorElement = document.getElementById("error-notification");
 
+/* Function to get all the questions from the knowledge base */
 async function loadQuestions() {
     /* Load json file */
     try {
+        /* We use await because we should only start showing questions once we have them all. */
         const response = await fetch('/static/json/kb.json');
         const data = await response.json();
         
@@ -23,6 +25,7 @@ async function loadQuestions() {
     }
 }
 
+/* Function to display a question, its option and its note */
 function showQuestion() {
     /* Render question */
     const question = questions[currentQuestion];
@@ -44,6 +47,7 @@ function showQuestion() {
     question.options.forEach((option, idx) => {
         let optionName = `option${idx}`
 
+        /* Creates a radio button and label for each option */
         const radioInput = Object.assign(document.createElement('input'), {
             type: 'radio',
             id: optionName,
@@ -65,17 +69,18 @@ function showQuestion() {
     if (question.hasOwnProperty("title") && question.hasOwnProperty("note")) {
         titleElement.innerText = question.title
         noteElement.innerText = question.note
-        folderElement.style.visibility = "visible"; 
+        folderElement.style.visibility = "visible"; /* Makes folder visible when there is a note */
     }
     else {
-        folderElement.style.visibility = "hidden";
+        folderElement.style.visibility = "hidden"; /* Hides folder when there is no note */
     }
 }
 
+/* Function that dictates what happens when the user clicks on the "next" button */
 function nextClicked(e){
     e.preventDefault();
-    const answer = document.querySelector('input[name="option"]:checked');
-    if (answer) {
+    const answer = document.querySelector('input[name="option"]:checked'); /* Gets the user answer */
+    if (answer) { /* Checks if the user has entered an answer */
         /* Hide error div */
         errorElement.style.visibility = "hidden"; 
 
@@ -99,25 +104,26 @@ function nextClicked(e){
         /* Check if we are currently branching according to the answer */
         let next = questions[currentQuestion].next
         if (typeof next === 'object' && next != null) {
-            next = next[answer.value];
+            next = next[answer.value]; /* For when we had branching, selects correct branch */
         }
         nextQuestion(next) 
-    } else {
+    } else { /* If no answer was chosen */
         /* Show error div */
         errorElement.style.visibility = "visible"; 
     }
 }
 
+/* Function that dictates what happens to move on to the next question */
 function nextQuestion(next) {
     currentQuestion = next;
     
-    if (currentQuestion != null) {
+    if (currentQuestion != null) { /* Reset radio buttons */
         const radioButtons = document.querySelectorAll('input[name="option"]');
         radioButtons.forEach((radio) => {
             radio.checked = false;
         });
         showQuestion();
-    } else {
+    } else { /* Move on to results */
         const form = document.querySelector("form"); 
         fetch('/get-score')
             .then(response => response.json())  
@@ -135,11 +141,11 @@ function nextQuestion(next) {
                     <p>Image taken from Microsoft Designer<p><br/>
                     <button id="OK" class="button">OK</button>
                 `;
-                const okButton = document.getElementById("OK");
-                okButton.addEventListener("click", resetKB);
+                const okButton = document.getElementById("OK"); 
+                okButton.addEventListener("click", resetKB); /* Event listener to call for reset upon click */
 
-                let suggestions = document.getElementById('suggestions');
-                for (let i = 0; i < rawSuggestions.length; i++) {
+                let suggestions = document.getElementById('suggestions'); 
+                for (let i = 0; i < rawSuggestions.length; i++) { /* For all suggestions, creates a list element and fills text with suggestion text to add to the unordered list */
                     let item = document.createElement('li');
                     item.textContent = rawSuggestions[i];
                     suggestions.appendChild(item);
@@ -152,8 +158,8 @@ function nextQuestion(next) {
 }
 
 function calculateHealth(score) {
-    score = (score/MAXIMUMSCORE) * 100 
-    diagnosis = ""
+    score = (score/MAXIMUMSCORE) * 100 /* Make it out of 100 */
+    diagnosis = "" /* Attribute a diagnosis according to the score */
     if (score <= 20) {
         diagnosis = "very poor"
     } else if (20 < score && score <= 40) {
@@ -186,4 +192,4 @@ function resetKB() {
     });
 }
 
-loadQuestions();
+loadQuestions(); /* First function call */

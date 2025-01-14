@@ -1,4 +1,4 @@
-.info {
+.info { /* To add the margins around the text blocks */
     margin: 20px;
 }
 
@@ -10,13 +10,13 @@
     background-color: #ceedd2;
 }
 
-.green-background {
+.green-background { /* Background to display Expert Card */
     background-color: #ceedd2;
     max-width: 700px;
     margin: 0 auto;
 }
 
-.profile-card {
+.profile-card { /* Use of glassmorphism to design the card */
     background: rgba( 255, 255, 255, 0.25 );
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;    
     max-width: 300px;
@@ -46,12 +46,12 @@
     background-color: #a5e9b5;
 }
 
-.knowledge-link  {
+.knowledge-link  { /* Link to knowledge page */
     text-decoration: none;
     color: #1c6f56;
 }
 
-.blob {
+.blob { /* To have spatious and justified text */
     line-height: 1.5;
     font-size: 17px;
     text-align: justify;

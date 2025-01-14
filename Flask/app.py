@@ -25,7 +25,7 @@ def show_knowlegde():
 @app.route('/get-score', methods=['GET'])
 def get_score():
     try:
-        with open(knowledge_base, 'r') as knowledge_base_file:
+        with open(knowledge_base, 'r') as knowledge_base_file: # Get knowledge base
             knowledge = json.load(knowledge_base_file)
         score = knowledge["Score"]
         information = knowledge["Saved_Information"]
@@ -35,7 +35,7 @@ def get_score():
             if info in knowledge["Suggestions"]:
                 suggestions.append(knowledge["Suggestions"][info])
 
-        return jsonify({"Score": score, "Suggestions": suggestions}), 200
+        return jsonify({"Score": score, "Suggestions": suggestions}), 200 # Send score and suggestion back
     except Exception as e:
         return jsonify({'message': 'Error occurred', 'error': str(e)}), 500
 
@@ -43,7 +43,7 @@ def get_score():
 def save_data():
     try:
         answer = request.get_json()
-        with open(knowledge_base, 'r') as knowledge_base_file:
+        with open(knowledge_base, 'r') as knowledge_base_file: # Get knowledge base
             knowledge = json.load(knowledge_base_file)
 
         # Update score
@@ -78,11 +78,11 @@ def save_data():
 @app.route('/reset-kb', methods=['DELETE'])
 def reset_kb():
     try:
-        with open(knowledge_base, 'r') as knowledge_base_file:
+        with open(knowledge_base, 'r') as knowledge_base_file: # Get knowledge base
             knowledge = json.load(knowledge_base_file)  
         knowledge["Score"] = 0
         knowledge["Saved_Information"] = []
-        with open(knowledge_base, 'w') as knowledge_base_file:
+        with open(knowledge_base, 'w') as knowledge_base_file: # Write back to knowledge base
             json.dump(knowledge, knowledge_base_file, indent=4)
         return jsonify({"message": "Facts cleared successfully"}), 200
     except Exception as e:

@@ -10,14 +10,14 @@ form {
     margin: 20px 0px 20px 0px;
 }
 
-input[type="radio"] {
+input[type="radio"] { /* Radio button inputs */
     accent-color: #24523a; 
     width: 20px; 
     height: 20px;
     cursor: pointer; 
 }
 
-label {
+label { /* Radio button descriptions, also clickable to select input */
     color: #24523a; 
     cursor: pointer; 
     position: absolute;
@@ -36,12 +36,12 @@ label {
     background-color: #8bdaa0;
 }
 
-.error-notification {
+.error-notification { /* Notification when no options selected */
     margin-top: 20px;
     margin-right: 40px;
     padding: 10px;
     color: #24523a;
     background-color: #8bdaa0;
-    visibility: hidden;
+    visibility: hidden; /* Hide when not needed */
     border-radius: 2px;
 }
