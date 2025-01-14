@@ -434,7 +434,9 @@
                 "High sugar fruit": 2,
                 "Low sugar fruit": 3
             },
-            "next": "alcohol"
+            "next": "alcohol",
+            "title": "Fruits",
+            "note": "High sugar fruits include apples, bananas, oranges,... Low sugar fruits include raspberries, blackberries, strawberries,..."
         },
         "alcohol": {
             "question": "How many times a week do you drink alcohol? (Standard serve about 600kJ)",
@@ -472,7 +474,7 @@
             },
             "next": "ultra_processed_food",
             "title": "Sodas",
-            "note": "Sodas include Fanta, Sprite, Coke, ..."
+            "note": "By sodas, we mean to refer to sugar-sweetened beverages like Fanta, Sprite, Coke, ..."
         },
         "ultra_processed_food": {
             "question": "How many times a week do you eat ultra-processed food? (Standard serve about 600kJ)",
@@ -611,7 +613,7 @@
             "next": null
         }
     },
-    "Score": 28,
+    "Score": 42,
     "Interaction_Rules": [
         {
             "conditions": [
@@ -653,12 +655,8 @@
     ],
     "Saved_Information": [
         "more_vegetables",
-        "legumes",
-        "no_meat",
         "no_fish",
-        "no_fruit",
-        "nuts",
-        "substitutes_drinks"
+        "substitutes_food"
     ],
     "Suggestions": {
         "no_vegetables": "The daily consumption of vegetables is crucial in improving your gut health.",
