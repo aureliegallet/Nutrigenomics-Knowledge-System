@@ -80,7 +80,7 @@
             }
         },
         "leafy_greens": {
-            "question": "How often do you eat leafy greens in a week?",
+            "question": "How often do you eat leafy greens in a week? (Standard serve about 1 cup)",
             "options": [
                 "Never",
                 "1 - 2",
@@ -107,7 +107,7 @@
             "note": "Leafy greens include kale, spinach, arugula, beets, turnips, ..."
         },
         "legumes": {
-            "question": "How often do you eat legumes in a week?",
+            "question": "How often do you eat legumes in a week? (Standard serve about 1/2 cup)",
             "options": [
                 "Never",
                 "1 - 2",
@@ -134,7 +134,7 @@
             "note": "Legumes include beans, chickpeas, peanuts, lentils, tamarind, ..."
         },
         "other_vegetables": {
-            "question": "How often do you eat other vegetables in a week?",
+            "question": "How often do you eat other vegetables in a week? ((Standard serve about 1/2 cup)",
             "options": [
                 "Never",
                 "1 - 2",
@@ -194,7 +194,7 @@
             }
         },
         "red_meat": {
-            "question": "How many times a week do you eat red meat?",
+            "question": "How many times a week do you eat red meat? (Standard serve about 100g raw)",
             "options": [
                 "Never",
                 "1 - 2",
@@ -214,7 +214,7 @@
             "note": "Red Meats include beef, horse, bacon, mutton, venison, ..."
         },
         "white_meat": {
-            "question": "How many times a week do you eat white meat?",
+            "question": "How many times a week do you eat white meat? (Standard serve about 100g raw)",
             "options": [
                 "Never",
                 "1 - 2",
@@ -249,7 +249,7 @@
             }
         },
         "lean_fish": {
-            "question": "How many times a week do you eat lean fish?",
+            "question": "How many times a week do you eat lean fish? (Standard serve about 115g raw)",
             "options": [
                 "Never",
                 "1 - 2",
@@ -269,7 +269,7 @@
             "note": "Lean Fish include cod, flounder, sole, perch, halibut, ..."
         },
         "fatty_fish": {
-            "question": "How many times a week do you eat fatty fish?",
+            "question": "How many times a week do you eat fatty fish? (Standard serve about 115g raw)",
             "options": [
                 "Never",
                 "1 - 2",
@@ -308,7 +308,7 @@
             }
         },
         "milk": {
-            "question": "How many times a week do you drink milk?",
+            "question": "How many times a week do you drink milk? (Standard serve about 1 cup)",
             "options": [
                 "Never",
                 "1 - 2",
@@ -326,7 +326,7 @@
             "next": "yoghurt"
         },
         "yoghurt": {
-            "question": "How many times a week do you eat yogurt?",
+            "question": "How many times a week do you eat yogurt? (Standard serve about 3/4 cup)",
             "options": [
                 "Never",
                 "1 - 2",
@@ -344,7 +344,7 @@
             "next": "cheese"
         },
         "cheese": {
-            "question": "How many times a week do you eat cheese?",
+            "question": "How many times a week do you eat cheese? (Standard serve about 40g)",
             "options": [
                 "Never",
                 "1 - 2",
@@ -362,7 +362,7 @@
             "next": "eggs"
         },
         "eggs": {
-            "question": "How many times a week do you eat eggs?",
+            "question": "How many times a week do you eat eggs? (Standard serve about 120g)",
             "options": [
                 "Never",
                 "1 - 2",
@@ -380,7 +380,7 @@
             "next": "juices"
         },
         "juices": {
-            "question": "Do you drink fruit juices?",
+            "question": "Do you drink fruit juices? (Standard serve about 1/2 cup)",
             "options": [
                 "Yes",
                 "No"
@@ -392,7 +392,7 @@
             "next": "fruit"
         },
         "fruit": {
-            "question": "Do you eat fruit?",
+            "question": "Do you eat fruit? (Standard serve about 150g)",
             "options": [
                 "Yes",
                 "No"
@@ -407,7 +407,7 @@
             }
         },
         "dried_fruit": {
-            "question": "How many times a week do you eat dried fruit?",
+            "question": "How many times a week do you eat dried fruit? (Standard serve about 30g)",
             "options": [
                 "Never",
                 "1 - 2",
@@ -437,7 +437,7 @@
             "next": "alcohol"
         },
         "alcohol": {
-            "question": "How many times a week do you drink alcohol?",
+            "question": "How many times a week do you drink alcohol? (Standard serve about 600kJ)",
             "options": [
                 "Never",
                 "1 - 2",
@@ -455,7 +455,7 @@
             "next": "sodas"
         },
         "sodas": {
-            "question": "How many times a week do you drink sodas?",
+            "question": "How many times a week do you drink sodas? (Standard serve about 600kJ)",
             "options": [
                 "Never",
                 "1 - 2",
@@ -475,7 +475,7 @@
             "note": "Sodas include Fanta, Sprite, Coke, ..."
         },
         "ultra_processed_food": {
-            "question": "How many times a week do you eat ultra-processed food?",
+            "question": "How many times a week do you eat ultra-processed food? (Standard serve about 600kJ)",
             "options": [
                 "Never",
                 "1 - 2",
@@ -495,7 +495,7 @@
             "note": "Ultra Processed Foods include Chips and Candy, ..."
         },
         "nuts": {
-            "question": "How many times a week do you eat nuts?",
+            "question": "How many times a week do you eat nuts? (Standard serve about 30g)",
             "options": [
                 "Never",
                 "1 - 2",
@@ -522,7 +522,7 @@
             "note": "Nuts include cashew, peanuts, ..."
         },
         "substitutes_food": {
-            "question": "How many times a week do you eat (not drink) plant-based substitues?",
+            "question": "How many times a week do you eat (not drink) plant-based substitues? (Standard serve about 170g)",
             "options": [
                 "Never",
                 "1 - 2",
@@ -549,7 +549,7 @@
             "note": "Plant-based Substitutes include tofu, tempeh, ..."
         },
         "substitutes_drinks": {
-            "question": "How many times a week do you drink plant-based substitues?",
+            "question": "How many times a week do you drink plant-based substitues? (Standard serve about 1 cup)",
             "options": [
                 "Never",
                 "1 - 2",
@@ -611,7 +611,7 @@
             "next": null
         }
     },
-    "Score": 0,
+    "Score": 2,
     "Interaction_Rules": [
         {
             "conditions": [
