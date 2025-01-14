@@ -70,6 +70,10 @@
                 "Yes",
                 "No"
             ],
+            "to_save": {
+                "Yes": null,
+                "No": "no_vegetables"
+            },
             "next": {
                 "Yes": "leafy_greens",
                 "No": "animal_products"
@@ -92,7 +96,7 @@
                 "Every day": 4
             },
             "to_save": {
-                "Never": null,
+                "Never": "more_vegetables",
                 "1 - 2": null,
                 "3 - 4": null,
                 "5 - 6": "leafy_greens",
@@ -119,7 +123,7 @@
                 "Every day": 4
             },
             "to_save": {
-                "Never": null,
+                "Never": "more_vegetables",
                 "1 - 2": null,
                 "3 - 4": null,
                 "5 - 6": "legumes",
@@ -181,7 +185,7 @@
                 "No": 6
             },
             "to_save": {
-                "Yes": null,
+                "Yes": "yes_meat",
                 "No": "no_meat"
             },
             "next": {
@@ -393,6 +397,10 @@
                 "Yes",
                 "No"
             ],
+            "to_save": {
+                "Yes": null,
+                "No": "no_fruit"
+            },
             "next": {
                 "Yes": "dried_fruit",
                 "No": "alcohol"
@@ -643,5 +651,13 @@
             "points": 2
         }
     ],
-    "Saved_Information": []
+    "Saved_Information": [],
+    "Suggestions": {
+        "no_vegetables": "The daily consumption of vegetables is crucial in improving your gut health.",
+        "more_vegetables": "It is important that you consume a variety of vegetables, particularly a lot of leafy greens and legumes.",
+        "yes_meat": "We recommend moderating meat consumption as it has been linked to increased risk of certain health issues.",
+        "no_fish": "It is important to increase fish consumption to a few times a week as it contains beneficial amega-3 fatty acids and is linked to brain health.",
+        "no_dairy": "While the benefits of dairy in general is nuanced, yoghurt is often cited as beneficial for gut health and could be added to your diet.",
+        "no_fruit": "Consider increasing fruit intake as they are a rich source of fiber, vitamins, minerals, and phytochemicals that can contribute to overall health and potentially benefit gut health."
+    }
 }

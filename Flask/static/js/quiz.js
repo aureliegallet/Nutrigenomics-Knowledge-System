@@ -123,15 +123,26 @@ function nextQuestion(next) {
             .then(response => response.json())  
             .then(data => {
                 health = calculateHealth(data.Score)
+                rawSuggestions = data.Suggestions
                 form.innerHTML = `
                     <h1>Results</h1>
                     <p>Your gut health is ${health}.</p><br/>
+                    <h2>Suggestions for Improvement:</h2>
+                    <ul id="suggestions"></ul>
+                    </br>
                     <img src="../static/img/gut.png" alt="gut" width=90%>
                     <p>Image taken from Microsoft Designer<p><br/>
                     <button id="OK" class="button">OK</button>
                 `;
                 const okButton = document.getElementById("OK");
                 okButton.addEventListener("click", resetKB);
+
+                let suggestions = document.getElementById('suggestions');
+                for (let i = 0; i < rawSuggestions.length; i++) {
+                    let item = document.createElement('li');
+                    item.textContent = rawSuggestions[i];
+                    suggestions.appendChild(item);
+                }
             })
             .catch(error => {
                 console.error("Error fetching score:", error);

@@ -28,7 +28,14 @@ def get_score():
         with open(knowledge_base, 'r') as knowledge_base_file:
             knowledge = json.load(knowledge_base_file)
         score = knowledge["Score"]
-        return jsonify({"Score": score}), 200
+        information = knowledge["Saved_Information"]
+        suggestions = []
+
+        for info in information:
+            if info in knowledge["Suggestions"]:
+                suggestions.append(knowledge["Suggestions"][info])
+
+        return jsonify({"Score": score, "Suggestions": suggestions}), 200
     except Exception as e:
         return jsonify({'message': 'Error occurred', 'error': str(e)}), 500
 
@@ -48,9 +55,11 @@ def save_data():
         if "to_save" in question and question["to_save"].get(answer["option"]) != None:
             information = question["to_save"].get(answer["option"])
             if isinstance(information, str):
-                knowledge["Saved_Information"].append(information)
+                if information not in knowledge["Saved_Information"]: # No duplicates
+                    knowledge["Saved_Information"].append(information)
             elif isinstance(information, list): # For the case where we have to add no meat, no fish and no dairy at the same time
-                knowledge["Saved_Information"].extend(information)
+                if information not in knowledge["Saved_Information"]: # No duplicates
+                    knowledge["Saved_Information"].extend(information)
 
         # Check for interaction rules
         for rule in knowledge["Interaction_Rules"]:
