@@ -60,7 +60,9 @@
                 "3 - 5": 2,
                 "5+": 3
             },
-            "next": "vegetables"
+            "next": "vegetables",
+            "title": "Exercise",
+            "note": "By exercise, we refer to substantial general activity such as walking, biking, yoga, going to the gym, playing football..."
         },
         "vegetables": {
             "question": "Do you eat vegetables?",
@@ -243,7 +245,7 @@
             }
         },
         "lean_fish": {
-            "question": "How many times a week do you eat lean fish (e.g. cod, trout)?",
+            "question": "How many times a week do you eat lean fish?",
             "options": [
                 "Never",
                 "1 - 2",
@@ -263,7 +265,7 @@
             "note": "Lean Fish include cod, flounder, sole, perch, halibut, ..."
         },
         "fatty_fish": {
-            "question": "How many times a week do you eat fatty fish (e.g. salmon, tuna)?",
+            "question": "How many times a week do you eat fatty fish?",
             "options": [
                 "Never",
                 "1 - 2",
@@ -415,7 +417,7 @@
             "next": "high_low_sugar_fruit"
         },
         "high_low_sugar_fruit": {
-            "question": "Do you eat the following?",
+            "question": "Which of the following do you eat more of?",
             "options": [
                 "High sugar fruit",
                 "Low sugar fruit"
@@ -465,7 +467,7 @@
             "note": "Sodas include Fanta, Sprite, Coke, ..."
         },
         "ultra_processed_food": {
-            "question": "How many times a week do you eat ultra-processed food (e.g. Chips, Candy)?",
+            "question": "How many times a week do you eat ultra-processed food?",
             "options": [
                 "Never",
                 "1 - 2",
@@ -512,7 +514,7 @@
             "note": "Nuts include cashew, peanuts, ..."
         },
         "substitutes_food": {
-            "question": "How many times a week do you eat (not drink) plant based substitues?",
+            "question": "How many times a week do you eat (not drink) plant-based substitues?",
             "options": [
                 "Never",
                 "1 - 2",
@@ -539,7 +541,7 @@
             "note": "Plant-based Substitutes include tofu, tempeh, ..."
         },
         "substitutes_drinks": {
-            "question": "How many times a week do you drink plant based substitues?",
+            "question": "How many times a week do you drink plant-based substitues?",
             "options": [
                 "Never",
                 "1 - 2",

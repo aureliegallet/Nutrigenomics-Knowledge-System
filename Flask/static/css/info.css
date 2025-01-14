@@ -2,6 +2,10 @@
     margin: 20px;
 }
 
+.page-title {
+    color: #2d8269
+}
+
 .json-translated {
     background-color: #ceedd2;
 }
@@ -42,7 +46,13 @@
     background-color: #a5e9b5;
 }
 
+.knowledge-link  {
+    text-decoration: none;
+    color: #1c6f56;
+}
+
 .blob {
     line-height: 1.5;
     font-size: 17px;
+    text-align: justify;
 }
