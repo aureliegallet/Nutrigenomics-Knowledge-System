@@ -19,7 +19,7 @@
         "BMI": {
             "question": "What is your BMI? You can calculate it at the following link: <a href='https://www.calculator.net/bmi-calculator.html' target='_blank' rel='noopener noreferrer'> BMI Calculator </a>",
             "options": [
-                "under 18.5>",
+                "under 18.5",
                 "18.5 - 24.9",
                 "25-29.9",
                 "30-39.9",
@@ -613,7 +613,7 @@
             "next": null
         }
     },
-    "Score": 42,
+    "Score": 0,
     "Interaction_Rules": [
         {
             "conditions": [
@@ -653,11 +653,7 @@
             "points": 2
         }
     ],
-    "Saved_Information": [
-        "more_vegetables",
-        "no_fish",
-        "substitutes_food"
-    ],
+    "Saved_Information": [],
     "Suggestions": {
         "no_vegetables": "The daily consumption of vegetables is crucial in improving your gut health.",
         "more_vegetables": "It is important that you consume a variety of vegetables, particularly a lot of leafy greens and legumes.",

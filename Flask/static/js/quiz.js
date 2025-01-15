@@ -136,7 +136,7 @@ function nextQuestion(next) {
                     <h2>Suggestions for Improvement:</h2>
                     <ul id="suggestions"></ul>
                     </br>
-                    <p> Make sure to look at our Knowledge Page to find out specifically how to improve your diet. </p>
+                    <p> Make sure to look at our <a href="/knowledge" style="text-decoration: none;color: #1c6f56;">Knowledge Page</a> to find out specifically how to improve your diet. </p>
                     </br>
                     <img src="../static/img/gut.png" alt="gut" width=90%>
                     <p>Image taken from Microsoft Designer<p><br/>
