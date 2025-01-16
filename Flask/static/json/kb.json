@@ -613,7 +613,7 @@
             "next": null
         }
     },
-    "Score": 70,
+    "Score": 0,
     "Interaction_Rules": [
         {
             "conditions": [
@@ -653,11 +653,7 @@
             "points": 2
         }
     ],
-    "Saved_Information": [
-        "legumes",
-        "substitutes_food",
-        "substitutes_drinks"
-    ],
+    "Saved_Information": [],
     "Suggestions": {
         "no_vegetables": "The daily consumption of vegetables is crucial in improving your gut health.",
         "more_vegetables": "It is important that you consume a variety of vegetables, particularly a lot of leafy greens and legumes.",
