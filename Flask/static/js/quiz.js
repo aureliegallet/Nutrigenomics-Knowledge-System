@@ -1,6 +1,7 @@
 let questions = {}
+let maximumScore = 0;
+let percentiles = {};
 let currentQuestion = "age";
-const MAXIMUMSCORE = 70;
 const questionElement = document.getElementById("question");
 const optionsElement = document.getElementById('options');
 const nextButton = document.getElementById("next");
@@ -19,6 +20,8 @@ async function loadQuestions() {
         const data = await response.json();
         
         questions = data.Knowledge_Base;
+        maximumScore = data.Maximum_Score;
+        percentiles = data.Percentiles;
         showQuestion(); 
     } catch (error) {
         console.error("Error loading questions:", error);
@@ -159,20 +162,17 @@ function nextQuestion(next) {
 }
 
 function calculateHealth(score) {
-    score = (score/MAXIMUMSCORE) * 100 /* Make it out of 100 */
+    score = (score/maximumScore) * 100 /* Make it out of 100 */
     diagnosis = "" /* Attribute a diagnosis according to the score */
-    if (score <= 20) {
-        diagnosis = "very poor"
-    } else if (20 < score && score <= 40) {
-        diagnosis = "poor"
-    } else if (40 < score && score <= 60) {
-        diagnosis = "normal"
-    } else if (60 < score && score <= 80) {
-        diagnosis = "good"
-    } else if (80 < score) {
-        diagnosis = "very good"
+
+    for (let percentile of percentiles) {
+        if (percentile.minimum <= score && score <= percentile.max) {
+            diagnosis = percentile.category;
+            break; 
+        }
     }
-    return diagnosis
+    return diagnosis;
+    
 }
 
 function resetKB() {

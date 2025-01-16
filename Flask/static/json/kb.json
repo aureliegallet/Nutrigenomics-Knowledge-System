@@ -392,7 +392,7 @@
             "next": "fruit"
         },
         "fruit": {
-            "question": "Do you eat fruit? (Standard serve about 150g)",
+            "question": "Do you eat fruit?",
             "options": [
                 "Yes",
                 "No"
@@ -613,7 +613,7 @@
             "next": null
         }
     },
-    "Score": 0,
+    "Score": 70,
     "Interaction_Rules": [
         {
             "conditions": [
@@ -653,7 +653,11 @@
             "points": 2
         }
     ],
-    "Saved_Information": [],
+    "Saved_Information": [
+        "legumes",
+        "substitutes_food",
+        "substitutes_drinks"
+    ],
     "Suggestions": {
         "no_vegetables": "The daily consumption of vegetables is crucial in improving your gut health.",
         "more_vegetables": "It is important that you consume a variety of vegetables, particularly a lot of leafy greens and legumes.",
@@ -661,5 +665,33 @@
         "no_fish": "It is important to increase fish consumption to a few times a week as it contains beneficial omega-3 fatty acids and is linked to brain health.",
         "no_dairy": "While the benefits of dairy in general is nuanced, yoghurt is often cited as beneficial for gut health and could be added to your diet.",
         "no_fruit": "Consider increasing fruit intake as they are a rich source of fiber, vitamins, minerals, and phytochemicals that can contribute to overall health and potentially benefit gut health."
-    }
+    },
+    "Maximum_Score": 70,
+    "Percentiles": [
+        {
+            "minimum": 0,
+            "max": 20,
+            "category": "very poor"
+        },
+        {
+            "minimum": 21,
+            "max": 40,
+            "category": "poor"
+        },
+        {
+            "minimum": 41,
+            "max": 60,
+            "category": "normal"
+        },
+        {
+            "minimum": 61,
+            "max": 80,
+            "category": "good"
+        },
+        {
+            "minimum": 81,
+            "max": 100,
+            "category": "very good"
+        }
+    ]
 }
