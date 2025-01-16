@@ -134,7 +134,7 @@
             "note": "Legumes include beans, chickpeas, peanuts, lentils, tamarind, ..."
         },
         "other_vegetables": {
-            "question": "How often do you eat other vegetables in a week? ((Standard serve about 1/2 cup)",
+            "question": "How often do you eat other vegetables in a week? (Standard serve about 1/2 cup)",
             "options": [
                 "Never",
                 "1 - 2",
