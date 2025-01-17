@@ -22,6 +22,7 @@ def show_expert():
 def show_knowlegde():
     return render_template('knowledge.html')
 
+# Call this to get the score and appropriate suggestions
 @app.route('/get-score', methods=['GET'])
 def get_score():
     try:
@@ -31,7 +32,7 @@ def get_score():
         information = knowledge["Saved_Information"]
         suggestions = []
 
-        for info in information:
+        for info in information: # Find which suggestions are appropriate based on the saved information
             if info in knowledge["Suggestions"]:
                 suggestions.append(knowledge["Suggestions"][info])
 
@@ -39,6 +40,7 @@ def get_score():
     except Exception as e:
         return jsonify({'message': 'Error occurred', 'error': str(e)}), 500
 
+# Call this to update the knowledge base when an answer has been entered
 @app.route('/update-kb', methods=['POST'])
 def save_data():
     try:
@@ -64,8 +66,8 @@ def save_data():
         # Check for interaction rules
         for rule in knowledge["Interaction_Rules"]:
             if all(condition in knowledge["Saved_Information"] for condition in rule["conditions"]):
-                knowledge["Score"] = knowledge["Score"] + rule["points"]
-                for condition in rule["conditions"]:
+                knowledge["Score"] = knowledge["Score"] + rule["points"] # Add the points
+                for condition in rule["conditions"]: # Remove the conditions so that two no_meat/no_fish rules can't be valid within on run
                     knowledge["Saved_Information"].remove(condition)
 
         # Write to file
@@ -74,14 +76,15 @@ def save_data():
         return jsonify({'message': 'Answer saved successfully!'}), 200
     except Exception as e:
         return jsonify({'message': 'Error occurred', 'error': str(e)}), 500
-    
+
+# Call this to reset the knowledge base when the quiz restarts
 @app.route('/reset-kb', methods=['DELETE'])
 def reset_kb():
     try:
         with open(knowledge_base, 'r') as knowledge_base_file: # Get knowledge base
             knowledge = json.load(knowledge_base_file)  
-        knowledge["Score"] = 0
-        knowledge["Saved_Information"] = []
+        knowledge["Score"] = 0 # Sets score back to 0
+        knowledge["Saved_Information"] = [] # Wipes Saved Information
         with open(knowledge_base, 'w') as knowledge_base_file: # Write back to knowledge base
             json.dump(knowledge, knowledge_base_file, indent=4)
         return jsonify({"message": "Facts cleared successfully"}), 200
